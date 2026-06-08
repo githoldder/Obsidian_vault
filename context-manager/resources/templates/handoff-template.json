@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "from-phase": "{phase-id}",
+  "to-phase": "{next-phase-id}",
+  "timestamp": "{iso-timestamp}",
+  "executive-summary": "{1-2句话的核心要点}",
+  "key-deliverables": [
+    "{可交付物1}",
+    "{可交付物2}"
+  ],
+  "critical-decisions": [
+    "{关键决策1}",
+    "{关键决策2}"
+  ],
+  "constraints-next-phase": [
+    "{下阶段约束1}",
+    "{下阶段约束2}"
+  ],
+  "open-issues": [
+    {
+      "issue": "{问题描述}",
+      "suggested-action": "{建议行动}"
+    }
+  ],
+  "reference-materials": [
+    "{参考文件路径1}",
+    "{参考文件路径2}"
+  ],
+  "estimated-effort-next-phase": "{X-Y hours}",
+  "confidence-level": "{high|medium|low}",
+  "agent-notes": "{交接Agent的备注}"
+}

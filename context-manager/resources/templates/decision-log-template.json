@@ -1,0 +1,11 @@
+{
+  "version": "1.0",
+  "project-id": "{project-id}",
+  "decisions": [],
+  "categories": {
+    "scope": "范围相关决策",
+    "technical": "技术相关决策",
+    "design": "设计相关决策",
+    "process": "流程相关决策"
+  }
+}

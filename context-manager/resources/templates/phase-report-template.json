@@ -1,0 +1,56 @@
+{
+  "version": "1.0",
+  "phase-id": "{phase-id}",
+  "phase-name": "{phase-name}",
+  "display-name": "{display-name}",
+  "status": "completed",
+  "started-at": "{iso-timestamp}",
+  "completed-at": "{iso-timestamp}",
+  "duration-hours": 0,
+  "agent": "{agent-id}",
+  "summary": "{阶段完成摘要}",
+  "artifacts": [
+    {
+      "path": "{文件路径}",
+      "type": "{documentation|code|design|test}",
+      "description": "{文件描述}"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "{decision-id}",
+      "description": "{决策描述}",
+      "rationale": "{决策理由}",
+      "alternatives-considered": ["{选项1}", "{选项2}"]
+    }
+  ],
+  "issues-encountered": [
+    {
+      "id": "{issue-id}",
+      "severity": "{critical|high|medium|low}",
+      "description": "{问题描述}",
+      "resolution": "{解决方案}"
+    }
+  ],
+  "metrics": {
+    "files-created": 0,
+    "files-modified": 0,
+    "lines-of-documentation": 0,
+    "lines-of-code": 0,
+    "tests-written": 0,
+    "tests-passing": 0,
+    "decisions-made": 0,
+    "issues-resolved": 0,
+    "issues-discovered": 0
+  },
+  "quality-checks": {
+    "documentation-complete": true,
+    "code-reviewed": true,
+    "tests-passing": true,
+    "standards-followed": true
+  },
+  "next-phase-recommendations": [
+    "{建议1}",
+    "{建议2}"
+  ]
+}

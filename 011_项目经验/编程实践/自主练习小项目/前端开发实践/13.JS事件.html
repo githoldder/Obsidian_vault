@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js事件处理</title>
+</head>
+<body>
+    <button onclick="handleClick()">这是一个点击事件按钮</button>
+    <input type="text" onfocus="handleFocus()" onblur="handleBlur()" placeholder="点击这里输入内容">
+    <script>
+        //点击事件
+        function handleClick(){
+            alert("按钮被点击了！");
+        }
+        //聚焦事件
+        function handleFocus(){
+            console.log("输入框获得焦点！");
+        }
+        //失焦事件
+        function handleBlur(){
+            console.log("输入框失去焦点！");
+        }
+    </script>
+</body>
+</html>

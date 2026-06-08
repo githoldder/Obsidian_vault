@@ -1,0 +1,11 @@
+id,topic,data_point,source,date,credibility
+1,russian_online_market,53.3 billion roubles (2021),HSE University,2017-09,S级
+2,russian_online_market,20% annual growth rate,Statista,2021,B级
+3,russian_language_learning,24.6 billion roubles (2021),HSE University,2017-09,S级
+4,kazakh_students_abroad,91860 students,UNESCO,2025,B级
+5,kazakh_students_china,11764 students (2014),Eurasian Research,2014,S级
+6,chinese_language_apps,33 top apps reviewed,Flexi Classes,2025,A级
+7,one_belt_one_road,52 African countries signed,Wikipedia,2022,S级
+8,russian_online_language,71% students complete courses,Statista,2022,B级
+9,kazakh_bachelor_tuition,$1500-4000/year,Education.com,2026,A级
+10,global_online_education,$165 billion (2016),HSE University,2017,S级

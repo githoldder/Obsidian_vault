@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .father {
+        width: 800px;
+        border: 10px solid black;
+        /* height: 00px;高度坍缩 */
+        background-color: rgb(240, 240, 240);
+        overflow: hidden;
+    }
+    /* .father::after {
+        content: "";
+        display: block;
+        clear: both;
+    } */
+    .left-son {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(255, 99, 71);
+        float: left;
+    }
+    .right-son {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(30, 144, 255);
+        float: right;
+    }
+
+</style>
+<body>
+    <div class="father">
+        <div class="left-son">左浮动</div>
+
+        <div class="right-son">右浮动</div>
+  </div>
+  <p>这是一段文本这是一段文本这是一段文本这是一段文本这是一段文本这是一段文本这是一段文本这是一段文本这是一段文本</p>
+</body>
+</html>

@@ -1,0 +1,3 @@
+[Feature] | UI Update to Match Screenshots | Success
+[Feature] | Avatar AlertDialog & Data Passing | Success
+[Feature] | Real Image Avatar Dialog | Success

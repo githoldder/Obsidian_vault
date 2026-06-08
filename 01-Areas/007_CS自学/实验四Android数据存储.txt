@@ -1,0 +1,17 @@
+实验四Android数据存储 - 思考题与总结答案
+
+(1) SQLiteOpenHelper类的作用是什么？里面的有哪些方法，干什么用？
+
+答：SQLiteOpenHelper类是Android中用来管理数据库创建和版本更新的辅助类。在我们的程序中，它被实现为StudentDbHelper类。这个类里面主要有三个方法：首先是构造方法StudentDbHelper(Context context)，它通过调用父类构造函数来指定数据库名字为student_manager.db，版本号为1；其次是onCreate(SQLiteDatabase db)方法，它在数据库第一次创建时被系统调用，执行了创建学生表的SQL建表语句；最后是onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)方法，它在数据库版本升级时被调用，通过先删除旧表再调用onCreate来重新建表。
+
+(2) 数据库操作(增删改查)一般定义成DAO操作类，程序中的操作类是什么？里面有哪些方法，这些方法分别调用了什么SQL语句？
+
+答：程序中的数据库操作类是StudentDao。这个类中定义了几个核心的方法来完成增删改查：insert方法用于插入新学生，底层调用的是db.insert，对应的SQL语句为INSERT INTO students；update方法用于更新学生信息，底层调用的是db.update，对应的SQL语句是UPDATE students SET ... WHERE id = ?；delete方法用于删除学生记录，底层调用的是db.delete，对应的SQL语句是DELETE FROM students WHERE id = ?；findById方法用于根据ID查找单个学生，底层调用的是db.query，对应的SQL语句是SELECT * FROM students WHERE id = ?；findAll方法用于获取所有学生列表，底层调用的是db.query并传入id DESC进行降序排列，对应的SQL语句是SELECT * FROM students ORDER BY id DESC；count方法用于统计学生总人数，底层调用的是db.rawQuery，对应的SQL语句是SELECT COUNT(*) FROM students。
+
+(3) 学生一览表中的listview使用的适配器(继承BaseAdapter的类)作了哪些修改？里面如何调用DAO类的方法的?
+
+答：在学生一览表中，ListView使用的适配器是StudentAdapter类。我们在这个类中继承了BaseAdapter，并重写了getCount、getItem、getItemId和getView这四个核心方法。在getCount中返回了学生列表的长度，在getItem和getItemId中分别返回了对应位置的学生对象和它的数据库ID。在getView方法中，我们通过LayoutInflater加载了自定义的布局文件item_student.xml，把学生的学号、姓名、专业等信息绑定到界面控件上，并为详细按钮绑定了点击事件。关于如何调用DAO方法，StudentAdapter内部并没有直接调用StudentDao的方法，而是定义了一个OnDetailClickListener点击事件的回调接口。当用户点击详细按钮时，适配器会触发这个接口的onDetailClick方法，把点击事件交由外部 of StudentListFragment处理。Fragment在收到回调后会跳转到编辑表单页面，最后在StudentFormFragment中通过调用StudentRepository间接调用了StudentDao的增删改查方法。
+
+(4) 界面上增删改查访问数据时(包括listview的适配器类中访问数据时)，需要访问DAO操作类，为什么不在界面上直接调用DAO操作类，而是调用一个学生数据相关的类，在这个类中再调用DAO操作类？
+
+答：不在界面上直接调用DAO操作类，而是通过调用学生数据相关的仓储类StudentRepository来间接调用DAO，主要是为了实现界面与数据的解耦和关注点分离。UI界面应该只负责展示数据和响应用户操作，而不应该关心数据具体是怎么存储的。引入Repository后，如果以后需要把数据存储方式从本地数据库改为网络API或加入内存缓存，我们只需要修改Repository内部的逻辑，而不需要动任何界面的代码，这大大提高了代码的可维护性。此外，Repository还可以用来封装一些通用的业务逻辑或默认的初始化操作，比如在我们的程序中，当数据库为空时，StudentRepository可以通过initDemoData方法自动插入几条默认的学生测试数据，这种初始化逻辑如果写在界面里就会显得很臃肿，写在仓储类里则更符合分层架构的设计原则。

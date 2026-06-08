@@ -1,0 +1,35 @@
+{
+	"nodes":[
+		{"id":"794ad1ca223ebb01","type":"text","text":"科目三正式考试流程（注意细节）","x":-580,"y":-400,"width":250,"height":60,"color":"#5a8ebf"},
+		{"id":"2fd8e41a3b343bff","type":"text","text":"1.身份验证","x":-579,"y":-262,"width":250,"height":60,"color":"3"},
+		{"id":"64ab45baaf0cf4c8","type":"text","text":"身份验证两步走，先关车门后验证","x":-170,"y":-261,"width":250,"height":60,"color":"3"},
+		{"id":"4ea90602f3ef6f21","type":"text","text":"2.绕车检查","x":-579,"y":-130,"width":250,"height":60,"color":"2"},
+		{"id":"7e747a7b43858007","type":"text","text":"绕车一周先尾后头，三灯点亮再回车内","x":-168,"y":-128,"width":250,"height":60,"color":"2"},
+		{"id":"a867159a944e24ad","type":"text","text":"3.上车调整","x":-579,"y":6,"width":250,"height":60,"color":"1"},
+		{"id":"2c1783d067427f8d","type":"text","text":"4.打火发动","x":-579,"y":133,"width":250,"height":60,"color":"5"},
+		{"id":"7d3d380902dfc989","type":"text","text":"三板斧：踩离合，关钥匙，打火发动","x":-170,"y":135,"width":250,"height":60,"color":"5"},
+		{"id":"c5f92be029a4b884","type":"text","text":"5.灯光考试","x":-578,"y":288,"width":250,"height":60,"color":"6"},
+		{"id":"7104133d0ba9eee2","type":"text","text":"6.起步","x":-577,"y":442,"width":250,"height":60,"color":"1"},
+		{"id":"bf9841caafae34d8","type":"text","text":"7.路线图","x":-577,"y":585,"width":250,"height":60},
+		{"id":"cb3509e3f10996a2","type":"text","text":"起步六步走：\n左转向灯，\n踩离合，\n挂一档，\n松手刹，\n左右砖头，\n起步","x":106,"y":743,"width":214,"height":217,"color":"1"},
+		{"id":"2623ec8cdacf071a","type":"file","file":"012_图片/科目三路线图.jpg","x":-648,"y":805,"width":596,"height":1035},
+		{"id":"f7c206583c0a7b16","type":"text","text":"上车调整分五步走：关好车门，灯光复位，归空挡，调整座位，系安全带","x":-168,"y":-24,"width":250,"height":120,"color":"1"},
+		{"id":"33202024896b88de","type":"file","file":"012_图片/科目三灯光.jpg","x":119,"y":36,"width":401,"height":633}
+	],
+	"edges":[
+		{"id":"22ae8bccc1808098","fromNode":"794ad1ca223ebb01","fromSide":"bottom","toNode":"2fd8e41a3b343bff","toSide":"top"},
+		{"id":"c24bcae43b028529","fromNode":"2fd8e41a3b343bff","fromSide":"right","toNode":"64ab45baaf0cf4c8","toSide":"left"},
+		{"id":"6854a711ed98a342","fromNode":"2fd8e41a3b343bff","fromSide":"bottom","toNode":"4ea90602f3ef6f21","toSide":"top"},
+		{"id":"141e0cfda1f203c0","fromNode":"4ea90602f3ef6f21","fromSide":"right","toNode":"7e747a7b43858007","toSide":"left"},
+		{"id":"0850c9ebbcf92894","fromNode":"4ea90602f3ef6f21","fromSide":"bottom","toNode":"a867159a944e24ad","toSide":"top"},
+		{"id":"96d722becb365bd0","fromNode":"a867159a944e24ad","fromSide":"right","toNode":"f7c206583c0a7b16","toSide":"left"},
+		{"id":"4d2753c4659930b7","fromNode":"a867159a944e24ad","fromSide":"bottom","toNode":"2c1783d067427f8d","toSide":"top"},
+		{"id":"37fb098719374ce8","fromNode":"2c1783d067427f8d","fromSide":"right","toNode":"7d3d380902dfc989","toSide":"left"},
+		{"id":"845e4c32b655fe19","fromNode":"2c1783d067427f8d","fromSide":"bottom","toNode":"c5f92be029a4b884","toSide":"top"},
+		{"id":"afce52024dfcd702","fromNode":"c5f92be029a4b884","fromSide":"right","toNode":"33202024896b88de","toSide":"left"},
+		{"id":"98e40bf51ede5cd8","fromNode":"c5f92be029a4b884","fromSide":"bottom","toNode":"7104133d0ba9eee2","toSide":"top"},
+		{"id":"b1ffa47984b4310e","fromNode":"7104133d0ba9eee2","fromSide":"bottom","toNode":"bf9841caafae34d8","toSide":"top"},
+		{"id":"eedb0f288fa74965","fromNode":"7104133d0ba9eee2","fromSide":"right","toNode":"cb3509e3f10996a2","toSide":"left"},
+		{"id":"29180280b1ceb0e8","fromNode":"bf9841caafae34d8","fromSide":"bottom","toNode":"2623ec8cdacf071a","toSide":"top"}
+	]
+}

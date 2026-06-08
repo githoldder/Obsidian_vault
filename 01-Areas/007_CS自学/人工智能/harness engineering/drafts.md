@@ -1,0 +1,1 @@
+‘从github上下载anthropics官方的superpowers插件，拷贝到‘/Users/caolei/Desktop/文件处理全能助手’；另外github上有现在爆火的cc泄露的内部源代码仓库，将其分析整理成md文件并download到我的‘/Users/caolei/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Obsidian_root/007_CS自学/人工智能/harness engineering’，注意，不是源码，而是分析后的详细内部智能体编排架构剖析’

@@ -1,0 +1,15 @@
+{
+	"nodes":[
+		{"id":"70951466692d9ee1","type":"file","file":"003_思维方式/三类世界观/一元论.md","x":-595,"y":-362,"width":400,"height":400},
+		{"id":"ac67f8082d97a0ac","type":"text","text":"多元思维中的黄金圈法则","x":-125,"y":-7,"width":250,"height":60,"color":"3"},
+		{"id":"7747dd0fec9a4246","type":"text","text":"一元论","x":-125,"y":-223,"width":65,"height":120,"color":"4"},
+		{"id":"95e35e62cb904128","type":"text","text":"二元论","x":60,"y":-220,"width":65,"height":117,"color":"6"},
+		{"id":"99e1e81a38fbb197","type":"file","file":"003_思维方式/三类世界观/二元论.md","x":195,"y":-361,"width":400,"height":400},
+		{"id":"c0e6e66edb060e88","type":"file","file":"002_知识体系构建/001-如何学习一个陌生领域/拆解.md","x":-197,"y":140,"width":395,"height":400}
+	],
+	"edges":[
+		{"id":"03ff93fcbe584878","fromNode":"95e35e62cb904128","fromSide":"right","toNode":"99e1e81a38fbb197","toSide":"left"},
+		{"id":"d681dc34bb8775dd","fromNode":"ac67f8082d97a0ac","fromSide":"bottom","toNode":"c0e6e66edb060e88","toSide":"top"},
+		{"id":"bfbf5e2b12ddb9d0","fromNode":"7747dd0fec9a4246","fromSide":"left","toNode":"70951466692d9ee1","toSide":"right"}
+	]
+}

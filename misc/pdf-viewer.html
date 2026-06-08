@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PDF 预览</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <!-- pdf.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.2.67/pdf.min.mjs" type="module"></script>
+  <script nomodule src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+</head>
+<body>
+  <table class="main-container-table" cellspacing="0" cellpadding="0">
+    <tr>
+      <td class="table-header">
+        <span class="title">PDF 预览</span>
+        <span class="small muted">支持翻页、缩放与页码跳转</span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <table>
+          <tr>
+            <td style="width:60px;" class="center"><a href="#" id="btnPrev" class="btn">上一页</a></td>
+            <td style="width:60px;" class="center"><a href="#" id="btnNext" class="btn">下一页</a></td>
+            <td style="width:80px;" class="center"><a href="#" id="btnZoomOut" class="btn">缩小</a></td>
+            <td style="width:80px;" class="center"><a href="#" id="btnZoomIn" class="btn">放大</a></td>
+            <td>
+              <table>
+                <tr>
+                  <td class="small">页码</td>
+                  <td><input id="pageNum" type="number" min="1" value="1" style="width:70px;" /></td>
+                  <td class="small">/</td>
+                  <td class="small" id="pageCount">1</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <table>
+          <tr>
+            <td class="center">
+              <canvas id="pdfCanvas" style="max-width:100%; border:1px solid #ccc;"></canvas>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+
+  <script type="module">
+    import * as pdfjs from 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.2.67/pdf.mjs';
+    pdfjs.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.2.67/pdf.worker.mjs';
+
+    const urlParams = new URLSearchParams(location.search);
+    const fileUrl = urlParams.get('file');
+    const canvas = document.getElementById('pdfCanvas');
+    const ctx = canvas.getContext('2d');
+
+    const btnPrev = document.getElementById('btnPrev');
+    const btnNext = document.getElementById('btnNext');
+    const btnZoomIn = document.getElementById('btnZoomIn');
+    const btnZoomOut = document.getElementById('btnZoomOut');
+    const pageNumInput = document.getElementById('pageNum');
+    const pageCountSpan = document.getElementById('pageCount');
+
+    let pdfDoc = null;
+    let currentPage = 1;
+    let scale = 1.2; // 默认缩放
+    let rendering = false;
+    let pendingPage = null;
+
+    function renderPage(num) {
+      rendering = true;
+      pdfDoc.getPage(num).then(function(page) {
+        const viewport = page.getViewport({ scale });
+        canvas.width = viewport.width;
+        canvas.height = viewport.height;
+
+        const renderContext = {
+          canvasContext: ctx,
+          viewport: viewport
+        };
+
+        page.render(renderContext).promise.then(function() {
+          rendering = false;
+          pageNumInput.value = num;
+          if (pendingPage !== null) {
+            const n = pendingPage; pendingPage = null; renderPage(n);
+          }
+        });
+      });
+    }
+
+    function queueRenderPage(num) {
+      if (rendering) {
+        pendingPage = num;
+      } else {
+        renderPage(num);
+      }
+    }
+
+    function showPage(num) {
+      if (!pdfDoc) return;
+      if (num < 1) num = 1;
+      if (num > pdfDoc.numPages) num = pdfDoc.numPages;
+      currentPage = num;
+      queueRenderPage(num);
+    }
+
+    function initViewer(src) {
+      if (!src) {
+        alert('未提供 PDF 文件');
+        return;
+      }
+      pdfjs.getDocument(src).promise.then(function(pdf) {
+        pdfDoc = pdf;
+        pageCountSpan.textContent = pdf.numPages;
+        showPage(1);
+      }).catch(function(err) {
+        alert('PDF 加载失败：' + err.message);
+      });
+    }
+
+    btnPrev.addEventListener('click', function(e) { e.preventDefault(); showPage(currentPage - 1); });
+    btnNext.addEventListener('click', function(e) { e.preventDefault(); showPage(currentPage + 1); });
+    btnZoomIn.addEventListener('click', function(e) { e.preventDefault(); scale = Math.min(scale + 0.2, 3); showPage(currentPage); });
+    btnZoomOut.addEventListener('click', function(e) { e.preventDefault(); scale = Math.max(scale - 0.2, 0.4); showPage(currentPage); });
+    pageNumInput.addEventListener('change', function() { showPage(parseInt(pageNumInput.value || '1', 10)); });
+
+    initViewer(fileUrl);
+  </script>
+
+  <script nomodule>
+    // 兼容不支持 ES module 的环境（简化：仅提示）
+    (function(){
+      if (!window.pdfjsLib) return; // 如果加载了 v2 版本，也可实现渲染；此处为简化，优先使用上面的 module 版本
+    })();
+  </script>
+</body>
+</html>

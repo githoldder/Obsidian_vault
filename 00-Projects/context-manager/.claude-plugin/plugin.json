@@ -1,0 +1,22 @@
+{
+  "name": "context-manager",
+  "version": "1.0.0",
+  "description": "智能上下文管理系统 - 实现AI Agent接力跑机制，确保多轮协作的连贯性和可追溯性",
+  "author": {
+    "name": "Claudian",
+    "email": ""
+  },
+  "license": "MIT",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "context-management",
+    "agent-orchestration",
+    "relay-system",
+    "workflow",
+    "continuity"
+  ]
+}

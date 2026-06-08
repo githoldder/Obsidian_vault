@@ -1,0 +1,87 @@
+```html
+<!----告诉浏览器这是一个 HTML5 文档---->
+<!DOCTYPE html>
+<html lang="zh">
+<!--设置语言-->
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML 练习</title>
+
+</head>
+
+<body>
+
+    <h1>
+
+        这是一个 HTML 练习页面
+
+    </h1>
+
+    <p>
+
+        这是一个段落，包含一些 <b>加粗</b> 和 <i>斜体</i> 、<u>下划线</u>、<s>删除线</s> 的文本。
+
+    </p>
+
+    <h2>这是一个二级标题</h2>
+
+    以下包含的是一个有序列表：
+
+    <ol>
+
+        <li>第一项</li>
+
+        <li>第二项</li>
+
+        <li>第三项</li>
+
+    </ol>
+
+    以下包含的是一个无序列表：
+
+    <ul>
+
+        <li>列表项 1</li>
+
+        <li>列表项 2</li>
+
+        <li>列表项 3</li>
+
+    </ul>
+
+  
+
+    <h3>这是一个三级标题</h3>
+
+    这是一个表格：
+
+    <table border="1">
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>城市</th>
+        </tr>
+        <tr>
+            <td>张三</td>
+            <td>28</td>
+            <td>北京</td>
+        </tr>
+        <tr>
+            <td>李四</td>
+            <td>32</td>
+            <td>上海</td>
+        </tr>
+        <tr>
+            <td>王五</td>
+            <td>24</td>
+            <td>广州</td>
+        </tr>
+    </table>
+    <h4>这是一个四级标题</h4>
+</body>
+</html>
+```

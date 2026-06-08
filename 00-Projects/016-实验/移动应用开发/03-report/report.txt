@@ -1,0 +1,68 @@
+# 实验一：Android界面布局 实验总结与思考报告
+
+## 1. 学生数据输入界面上，如何进行数据校验的。(实现思路和关键代码)
+
+**实现思路：**
+在点击“确认”按钮时触发事件监听，获取各个输入框（EditText）的内容，然后依次进行校验判断。
+1. **非空校验**：使用 `TextUtils.isEmpty()` 检查所有输入框，若有空则拦截。
+2. **学号校验**：判断字符串长度是否等于8且使用正则 `"\\d+"` 检查是否全数字；为了查重，遍历全局的 `Student.getList()`，比对是否已经存在该学号。
+3. **手机号校验**：判断字符串长度是否等于11，并且使用正则表达式 `"\\d+"` 检查。
+4. **年龄校验**：使用 `Integer.parseInt()` 将年龄字符串转为整数以判定是否在16~30之间，如果引发抛出 `NumberFormatException` 异常则提示必须是数字。
+如某一步校验失败，使用 `Toast` 弹出相应的错误提示并返回；校验全部通过后，向静态List存入数据并结束当前Activity。
+
+**关键代码：**
+```java
+// 非空判断
+if (TextUtils.isEmpty(idStr) || TextUtils.isEmpty(nameStr) || TextUtils.isEmpty(ageStr) || TextUtils.isEmpty(phoneStr)) {
+    Toast.makeText(this, "所有项目不能为空", Toast.LENGTH_SHORT).show();
+    return false;
+}
+// 学号校验与查重
+if (idStr.length() != 8 || !idStr.matches("\\d+")) {
+    Toast.makeText(this, "学号必须是8位数字", Toast.LENGTH_SHORT).show();
+    return false;
+}
+for (Map<String, String> student : Student.getList()) {
+    if (idStr.equals(student.get("id"))) {
+        Toast.makeText(this, "学号不能重复", Toast.LENGTH_SHORT).show();
+        return false;
+    }
+}
+// 年龄验证
+try {
+    int age = Integer.parseInt(ageStr);
+    if (age < 16 || age > 30) {
+        Toast.makeText(this, "年龄必须在16~30之间", Toast.LENGTH_SHORT).show();
+        return false;
+    }
+} catch (NumberFormatException e) {
+    Toast.makeText(this, "年龄必须是数字", Toast.LENGTH_SHORT).show();
+    return false;
+}
+```
+
+## 2. 学生一览表是用什么组件实现的？使用了什么适配器？适配器代码编写有什么要求？
+
+**使用组件：** `ListView`。
+**使用适配器：** 自定义适配器继承了 `BaseAdapter` （项目中命名为 `StudentListAdapter`）。
+
+**适配器代码编写要求：**
+- **包含的类：** 
+  - 主类：继承 `BaseAdapter`，重写其四个抽象方法。
+  - 内部类 `ViewHolder`：用于缓存条目的控件引用，减少 `findViewById` 的耗时。
+- **需要重写的方法及作用：**
+  - `getCount()`：返回要列表展示的数据集合大小（长度）。
+  - `getItem(int position)`：返回指定索引位置(`position`)的数据对象。
+  - `getItemId(int position)`：返回列表项对应的行ID，通常直接返回 `position`。
+  - `getView(int position, View convertView, ViewGroup parent)`：作用是获取要在ListView中每个列表项展示的View。
+    需在此方法中利用 `LayoutInflater` 加载自定义项布局，使用 `ViewHolder` 获取并缓存其内部各个子控键，最终从 `data` 中根据 `position` 获取数据给控件赋值填充。
+
+## 3. 界面运行贴图
+
+**（操作提示：请在此处插入自己Android模拟器的运行截图）**
+
+- **学生一览表界面运行贴图** (需要有三行演示数据，首行是自己的学号姓名)：
+*(请在此处粘贴图片)*
+
+- **添加学生界面运行贴图**：
+*(请在此处粘贴图片)*

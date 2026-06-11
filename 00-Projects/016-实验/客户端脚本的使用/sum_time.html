@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>1+2+…+10000 求和运行时间</title>
+</head>
+<body>
+    <h2>计算 1 + 2 + … + 10000 的运行时间</h2>
+
+    <button id="startBtn">开始计算</button>
+
+    <script>
+        function calcSumAndTime() {
+            // 记录开始时间（毫秒）
+            var start = new Date().getTime();
+
+            var sum = 0;
+            for (var i = 1; i <= 10000; i++) {
+                sum += i;
+            }
+
+            // 记录结束时间（毫秒）
+            var end = new Date().getTime();
+
+            var elapsed = end - start; // 运行时间（毫秒）
+
+            alert("1+2+…+10000 的和为：" + sum + "\n运行时间为：" + elapsed + " 毫秒。");
+        }
+
+        var btn = document.getElementById("startBtn");
+        btn.onclick = calcSumAndTime;
+    </script>
+</body>
+</html>

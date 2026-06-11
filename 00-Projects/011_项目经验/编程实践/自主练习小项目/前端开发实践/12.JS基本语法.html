@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 基础语法</title>
+</head>
+
+<body>
+    <script>
+        var x;
+        let y=5;
+        const pi=3.14;
+        console.log(x,y,pi);
+        let name="张三";
+        console.log("你好，"+name);
+        let empty_value = null;
+        console.log(empty_value);
+        let time=9;
+        if(time==9)
+        alert("时间是上午9点钟");
+        else alert("时间不是上午9点钟");
+        while(time<12){
+            console.log("当前时间是上午："+time+"点钟");
+            time++;
+        }
+        for(let i=0;i<5;i++){
+            console.log("循环变量i的值是："+i);
+        }
+        function greet(person){
+            console.log("你好，"+person+"！");
+        }
+        greet("李四");
+        let a=greet('张三');
+        console.log(a);
+        console.log("脚本执行结束！");
+    </script>
+</body>
+</html>

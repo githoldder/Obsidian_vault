@@ -1,0 +1,20 @@
+{
+  "version": "1.0",
+  "project-id": "{project-id}",
+  "entries": [
+    {
+      "sequence": 1,
+      "timestamp": "{iso-timestamp}",
+      "type": "project-initiated",
+      "phase": "00",
+      "agent": "context-orchestrator",
+      "action": "创建项目结构",
+      "files-affected": [
+        "00-meta/project-manifest.json",
+        "00-meta/context-history.json"
+      ],
+      "context-hash": "{hash}",
+      "summary": "项目初始化，创建标准目录结构和元数据文件"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "version": "1.0",
+  "project-id": "{project-id}",
+  "issues": [],
+  "severities": {
+    "critical": "阻塞进展，必须立即解决",
+    "high": "严重影响，需要优先解决",
+    "medium": "一般问题，按计划解决",
+    "low": "轻微问题，可延后处理"
+  },
+  "categories": {
+    "technical": "技术问题",
+    "requirement": "需求问题",
+    "resource": "资源问题",
+    "external": "外部依赖问题"
+  }
+}

@@ -1,0 +1,33 @@
+# Agent & IDE caches
+.smart-env/
+.smtcmp_json_db/
+.idea/
+.vscode/
+.claude/
+
+# System
+.DS_Store
+*.tmp
+
+# Python
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+
+# Obsidian (regenerate on first open)
+.obsidian/
+
+# Nested git backups (corrupt)
+**/.git.bak
+
+# Nested git repos
+**/.git
+
+# Skills (add separately)
+00-Projects/000_个人看板/脚手架&通用模版&工具/04-skills/
+
+# Files that fail git add
+03-Archives/011_项目经验/小挑/ppt制作/01-ppt制作注意点.md
+01-Areas/002_知识体系构建/003_个人信息系统搭建/100_信息获取/110_调研方法/112_快速调研法2.0.md

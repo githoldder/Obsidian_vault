@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:gravity="top">
+
+    <ImageView
+        android:id="@+id/ivAvatar"
+        android:layout_width="120dp"
+        android:layout_height="140dp"
+        android:scaleType="centerCrop"
+        android:layout_marginEnd="15dp" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="学号 " android:textColor="#2669C6" android:textSize="18sp"/>
+            <TextView android:id="@+id/tvId" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#000000" android:textSize="18sp"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="姓名 " android:textColor="#2669C6" android:textSize="18sp"/>
+            <TextView android:id="@+id/tvName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#000000" android:textSize="18sp"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="班级 " android:textColor="#2669C6" android:textSize="18sp"/>
+            <TextView android:id="@+id/tvClazz" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#000000" android:textSize="18sp"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="手机号 " android:textColor="#2669C6" android:textSize="18sp"/>
+            <TextView android:id="@+id/tvPhone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#000000" android:textSize="18sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnDetail"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:text="详细"
+        android:textSize="16sp"
+        android:textColor="#2669C6"
+        android:backgroundTint="#DDDDDD"
+        android:padding="0dp"
+        android:layout_marginTop="0dp" />
+
+</LinearLayout>

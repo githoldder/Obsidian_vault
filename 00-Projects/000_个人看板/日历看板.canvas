@@ -1,0 +1,15 @@
+{
+	"nodes":[
+		{"id":"cffc5e74c55842c1","type":"text","text":"日记\n==当日复盘回顾==","x":-460,"y":-340,"width":340,"height":60,"color":"2"},
+		{"id":"308224158df9d97e","type":"text","text":"月报\n日历总览视图","x":280,"y":-340,"width":440,"height":60,"color":"1"},
+		{"id":"6cd39918b9748641","type":"text","text":"季报\n==一个季度一个大复盘==","x":-460,"y":60,"width":500,"height":60,"color":"6"},
+		{"id":"35f64f55d3f05b56","type":"text","text":"年报\n==年度阶段性目标成果以及战略总目标==","x":180,"y":60,"width":500,"height":60,"color":"#bf17ee"},
+		{"id":"41f2d531ba5ed698","type":"text","text":"周报\n==设计完美一周==","x":-100,"y":-340,"width":360,"height":60,"color":"4"},
+		{"id":"ae194b01a88e44cf","type":"text","text":"```dataview\ncalendar file.ctine\nfrom #光里日语 \n```\n#光里日语 \n```dataview\ncalendar file.mtime\nfrom #光里日语 \n```\n#逻辑学 \n```dataview\ncalendar file.ctime\nfrom #逻辑学 \n```\n","x":280,"y":-260,"width":440,"height":300},
+		{"id":"6a5581082e9467a7","type":"text","text":" #已完成项目\n```dataview\nTABLE WITHOUT ID file.name AS \"项目名称\",\n参考链接 AS \"参考资料\"\nFROM \"010_时间管理/GTD管理模板工具/002_项目清单\"\nWHERE type = \"project\" AND 状态 = \"已完成\"\nSORT file.name ASC\n```\n","x":-460,"y":140,"width":500,"height":300},
+		{"id":"a332993e4132ab9c","type":"text","text":"","x":180,"y":140,"width":500,"height":300},
+		{"id":"42af1ca72c843231","type":"file","file":"001_个人规划/002_周记/周记模板.md","x":-100,"y":-260,"width":360,"height":300},
+		{"id":"828c6ac053ea680c","type":"file","file":"001_个人规划/001_日记/日记模板.md","x":-460,"y":-260,"width":340,"height":300}
+	],
+	"edges":[]
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>根据年/月输出天数</title>
+</head>
+<body>
+    <h2>根据年、月输出对应的天数</h2>
+
+    <label for="year">年份：</label>
+    <input type="number" id="year" placeholder="例如：2024">
+    <br><br>
+
+    <label for="month">月份：</label>
+    <input type="number" id="month" placeholder="1-12">
+    <br><br>
+
+    <button id="calcBtn">计算天数</button>
+
+    <script>
+        // 计算指定年、月的天数
+        function getDaysInMonth(year, month) {
+            var days;
+
+            // 先处理每个月的基本天数
+            switch (month) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    days = 31;
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    days = 30;
+                    break;
+                case 2:
+                    // 判断闰年：能被4整除但不能被100整除，或者能被400整除
+                    var isLeap = (year % 4 == 0 && year % 100 !== 0) || (year % 400 === 0);
+                    days = isLeap ? 29 : 28;
+                    break;
+                default:
+                    days = 0; // 非法月份
+            }
+            return days;
+        }
+
+        function showDays() {
+            var yearInput = document.getElementById("year").value;
+            var monthInput = document.getElementById("month").value;
+
+            // 将字符串转换为数字
+            var year = parseInt(yearInput, 10);
+            var month = parseInt(monthInput, 10);
+
+            // 简单的合法性判断
+            if (isNaN(year) || isNaN(month)) {
+                alert("请输入有效的年份和月份（数字）！");
+                return;
+            }
+
+            var days = getDaysInMonth(year, month);
+
+            if (days === 0) {
+                alert("月份必须在 1 到 12 之间！");
+            } else {
+                alert(year + "年" + month + "月有" + days + "天。");
+            }
+        }
+
+        // 按钮绑定点击事件
+        var btn = document.getElementById("calcBtn");
+        btn.onclick = showDays;
+    </script>
+</body>
+</html>

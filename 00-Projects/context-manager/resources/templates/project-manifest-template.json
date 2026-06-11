@@ -1,0 +1,99 @@
+{
+  "project-id": "proj-{timestamp}-{hash}",
+  "name": "{project-name}",
+  "description": "{project-description}",
+  "created-at": "{iso-timestamp}",
+  "last-updated": "{iso-timestamp}",
+  "status": "initialized",
+  "current-phase": "01",
+  "phases": [
+    {
+      "id": "01",
+      "name": "intake",
+      "display-name": "需求澄清",
+      "status": "pending",
+      "description": "理解用户需求，明确范围和目标"
+    },
+    {
+      "id": "02a",
+      "name": "architecture-design",
+      "display-name": "架构设计",
+      "status": "pending",
+      "description": "设计系统架构，确定技术栈和服务边界"
+    },
+    {
+      "id": "02b",
+      "name": "data-model-design",
+      "display-name": "数据模型设计",
+      "status": "pending",
+      "description": "设计数据库schema和实体关系"
+    },
+    {
+      "id": "02c",
+      "name": "api-design",
+      "display-name": "接口设计",
+      "status": "pending",
+      "description": "设计API接口，定义请求响应格式"
+    },
+    {
+      "id": "03a",
+      "name": "backend-implementation",
+      "display-name": "后端实现",
+      "status": "pending",
+      "description": "实现后端服务和API"
+    },
+    {
+      "id": "03b",
+      "name": "frontend-implementation",
+      "display-name": "前端实现",
+      "status": "pending",
+      "description": "实现前端界面和交互"
+    },
+    {
+      "id": "04a",
+      "name": "testing",
+      "display-name": "测试验证",
+      "status": "pending",
+      "description": "执行单元测试、集成测试和验收测试"
+    },
+    {
+      "id": "04b",
+      "name": "review",
+      "display-name": "代码审查",
+      "status": "pending",
+      "description": "进行代码质量审查和优化"
+    },
+    {
+      "id": "05a",
+      "name": "documentation",
+      "display-name": "文档编写",
+      "status": "pending",
+      "description": "编写用户文档和技术文档"
+    },
+    {
+      "id": "05b",
+      "name": "deployment",
+      "display-name": "部署上线",
+      "status": "pending",
+      "description": "部署到生产环境并验证"
+    }
+  ],
+  "total-phases": 10,
+  "completed-phases": 0,
+  "progress-percentage": 0,
+  "key-metrics": {
+    "files-created": 0,
+    "files-modified": 0,
+    "decisions-recorded": 0,
+    "issues-resolved": 0,
+    "issues-open": 0
+  },
+  "tags": [],
+  "priority": "medium",
+  "assigned-agents": [],
+  "configuration": {
+    "auto-cleanup": true,
+    "backup-interval": "1h",
+    "health-check-interval": "24h"
+  }
+}

@@ -2,7 +2,7 @@
 # Auto-commit wrapper with lock cleanup (断点续传)
 set -e
 
-VAULT_DIR="$HOME/Desktop/Obsidian_root"
+VAULT_DIR="$HOME/projects/Obsidian_root"
 cd "$VAULT_DIR"
 
 # Clean stale lock files (from crashed git processes)

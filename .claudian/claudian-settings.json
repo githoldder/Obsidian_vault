@@ -3,7 +3,7 @@
   "permissionMode": "yolo",
   "model": "haiku",
   "thinkingBudget": "off",
-  "effortLevel": "high",
+  "effortLevel": "low",
   "serviceTier": "default",
   "enableAutoTitleGeneration": true,
   "titleGenerationModel": "",
@@ -25,16 +25,16 @@
   "providerConfigs": {
     "claude": {
       "safeMode": "acceptEdits",
-      "cliPath": "",
+      "cliPath": "/Users/caolei/.local/bin/claude",
       "cliPathsByHost": {},
       "loadUserSettings": true,
       "enableChrome": false,
       "enableBangBash": false,
       "enableOpus1M": false,
       "enableSonnet1M": false,
-      "customModels": "",
+      "customModels": "DeepSeek-V4-Flash",
       "lastModel": "haiku",
-      "environmentVariables": "",
+      "environmentVariables": "ANTHROPIC_BASE_URL=https://api.deepseek.com/anthropic\nANTHROPIC_AUTH_TOKEN=sk-9f6872d081534ea3aa1edb9ec6b0ed9e\nANTHROPIC_API_KEY=sk-9f6872d081534ea3aa1edb9ec6b0ed9e",
       "environmentHash": ""
     },
     "codex": {
@@ -81,7 +81,7 @@
     "claude": "haiku"
   },
   "savedProviderEffort": {
-    "claude": "high"
+    "claude": "low"
   },
   "savedProviderServiceTier": {},
   "savedProviderThinkingBudget": {},

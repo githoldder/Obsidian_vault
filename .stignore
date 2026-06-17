@@ -1,0 +1,26 @@
+// Syncthing ignore rules for Obsidian Vault
+// 同步到手机时排除以下内容
+
+// Git 内部状态（必须忽略，否则两端 Git 状态会打架）
+.git
+
+// 工作区状态（频繁变动，无同步价值）
+.obsidian/workspace
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+// 缓存文件
+.obsidian/cache
+
+// 手机端不要 Git 插件（会崩溃）
+.obsidian/plugins/obsidian-git
+
+// macOS 垃圾文件
+.DS_Store
+.Trashes
+.Spotlight-V100
+
+// 临时文件
+*.tmp
+*.swp
+*~

@@ -11,7 +11,7 @@ TABLE
     text AS "任务描述",
     due AS "截止日期",
     (date(due) - date(now)).days AS "剩余天数"
-FROM "010_时间管理/GTD管理模板工具/004_执行清单"
+FROM "01-Areas/010_时间管理/GTD管理模板工具/004_执行清单"
 WHERE !completed
 SORT due DESC
 ```

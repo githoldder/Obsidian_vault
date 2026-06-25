@@ -59,9 +59,11 @@
       "environmentVariables": "OPENCODE_ENABLE_EXA=1",
       "modelAliases": {},
       "preferredThinkingByModel": {},
-      "selectedMode": "",
+      "selectedMode": "claudian-yolo",
       "thinkingOptionsByModel": {},
-      "visibleModels": []
+      "visibleModels": [
+        "mimo/mimo-v2.5-pro"
+      ]
     },
     "pi": {
       "cliPath": "",
@@ -78,7 +80,8 @@
   },
   "settingsProvider": "claude",
   "savedProviderModel": {
-    "claude": "haiku"
+    "claude": "haiku",
+    "opencode": "opencode:mimo/mimo-v2.5-pro"
   },
   "savedProviderEffort": {
     "claude": "low"

@@ -37,17 +37,17 @@ CulCloud 云端资料处理平台
 
 ## 2. 技术选型与作用
 
-| 技术 | 代码位置 | 当前作用 |
-| --- | --- | --- |
-| React + Vite + TypeScript | `file-cloud-frontend/src/` | 用户端与管理端单页应用，视图状态和 API 调用集中在前端工程。 |
-| FastAPI | `backend/app/main.py`、`backend/app/routers/` | 主业务 API，负责文件、目录、预览、转换、任务、日志和健康检查。 |
-| MinIO | `backend/app/services/minio_client.py` | S3 风格对象存储，保存用户文件、预览缓存和转换结果。 |
-| Redis | `backend/app/services/task_queue.py`、`task_tracker.py`、`log_collector.py` | 保存任务短状态、任务索引、时间线、事件日志和健康快照。 |
-| Gotenberg | `backend/app/services/converter.py` | 处理 Office 到 PDF 等高保真转换，失败时部分转换使用本地库兜底。 |
-| PyMuPDF | `backend/app/services/converter.py` | PDF 页面图像提取、PDF 页面处理、批注导出和部分兜底转换。 |
-| Flask | `flask-analytics/app.py` | 对 Spark 输出的历史分析 JSON 提供 HTTP 接口。 |
-| Spark | `scripts/spark/culcloud_analytics.py` | 对遥测样本做格式分布、转换统计、趋势、质量、错误热力图等聚合。 |
-| ECharts | `file-cloud-frontend/src/components/EChartsWrapper.tsx` | 管理驾驶舱图表渲染。 |
+| 技术                        | 代码位置                                                                      | 当前作用                                   |
+| ------------------------- | ------------------------------------------------------------------------- | -------------------------------------- |
+| React + Vite + TypeScript | `file-cloud-frontend/src/`                                                | 用户端与管理端单页应用，视图状态和 API 调用集中在前端工程。       |
+| FastAPI                   | `backend/app/main.py`、`backend/app/routers/`                              | 主业务 API，负责文件、目录、预览、转换、任务、日志和健康检查。      |
+| MinIO                     | `backend/app/services/minio_client.py`                                    | S3 风格对象存储，保存用户文件、预览缓存和转换结果。            |
+| Redis                     | `backend/app/services/task_queue.py`、`task_tracker.py`、`log_collector.py` | 保存任务短状态、任务索引、时间线、事件日志和健康快照。            |
+| Gotenberg                 | `backend/app/services/converter.py`                                       | 处理 Office 到 PDF 等高保真转换，失败时部分转换使用本地库兜底。 |
+| PyMuPDF                   | `backend/app/services/converter.py`                                       | PDF 页面图像提取、PDF 页面处理、批注导出和部分兜底转换。       |
+| Flask                     | `flask-analytics/app.py`                                                  | 对 Spark 输出的历史分析 JSON 提供 HTTP 接口。       |
+| Spark                     | `scripts/spark/culcloud_analytics.py`                                     | 对遥测样本做格式分布、转换统计、趋势、质量、错误热力图等聚合。        |
+| ECharts                   | `file-cloud-frontend/src/components/EChartsWrapper.tsx`                   | 管理驾驶舱图表渲染。                             |
 
 ## 3. 前端代码树
 

@@ -10,18 +10,18 @@
 
 ![[6 分钟学会 UML 类图PT3M54.105S.webp]]
 -  [03:54](https://www.bilibili.com/video/BV1Wu4y1Y7ya/?t=234.105453#t=03:54.11) 
-类的关系类型-继承关系
+类的关系类型-**继承关系**
 ![[6 分钟学会 UML 类图PT4M32.757S.webp]]
 -  [04:32](https://www.bilibili.com/video/BV1Wu4y1Y7ya/?t=272.757312#t=04:32.76) 
-关联关系
+**关联关系**
 
 ![[6 分钟学会 UML 类图PT4M58.178S.webp]]
 -  [04:58](https://www.bilibili.com/video/BV1Wu4y1Y7ya/?t=298.178352#t=04:58.18) 
-部分存在于整体之内，是聚合关系
+部分存在于整体之内，是**聚合关系**
 ![[6 分钟学会 UML 类图PT5M31.836S.webp]]
 
 -  [05:31](https://www.bilibili.com/video/BV1Wu4y1Y7ya/?t=331.836443#t=05:31.84) 
-组合关系-没有父类时，子类将无法存在
+**组合关系**-没有父类时，子类将无法存在
 
 ![[6 分钟学会 UML 类图PT5M5.317S.webp]]
 -  [05:05](https://www.bilibili.com/video/BV1Wu4y1Y7ya/?t=305.317337#t=05:05.32) 

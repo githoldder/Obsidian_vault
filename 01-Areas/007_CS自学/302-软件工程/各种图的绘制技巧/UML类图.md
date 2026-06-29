@@ -50,3 +50,37 @@
 ```mermaid
 
 ```
+
+
+```mermaid
+classDiagram
+    %% 定义类及其属性
+    class Customer {
+        - rentalOrders : List~RentalOrder~
+    }
+    
+    class RentalOrder {
+        - car : Car
+    }
+    
+    class Car {
+        - plateNo : String
+        - dailyRate : double
+    }
+    
+    class EconomyCar {
+    }
+    
+    class LuxuryCar {
+    }
+
+    %% 泛化关系 (实线 + 空心三角)
+    EconomyCar --|> Car
+    LuxuryCar --|> Car
+
+    %% 关联关系 (普通连线 + 箭头方向 + 多重性)
+    Customer "1" --> "0..*" RentalOrder : 拥有 >
+
+    %% 组合关系 (实心菱形画在整体 RentalOrder 一端)
+    RentalOrder *-- "1" Car : 包含
+```

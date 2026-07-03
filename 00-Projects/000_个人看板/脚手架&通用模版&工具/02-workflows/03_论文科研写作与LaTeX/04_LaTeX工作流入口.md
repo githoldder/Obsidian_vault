@@ -154,15 +154,17 @@
 3. **Claude Code 配置**（逻辑中枢）
    - 在项目目录运行 `claude` 启动 Claude Code
    - 关键指令示例：
-     ```
+```
+
      分析 Resources/ 文件夹下关于『Transformer 架构』的所有摘录，
-     生成一个结构化 LaTeX patch，目标文件为 chapter_related_work.tex，
+     生成一个结构化 LaTeX patch，目标文件为chapter_related_work.tex，
      operation 为 insert_after，anchor 为指定小节标题。
      patch 必须经过 LaTeX 语法审查和论文审稿人审查后再注入。
-     ```
+
    - 写完自动读取 `.bib` 确保 `\cite{}` Key 有效
    - 禁止让 Claude Code 直接输出 Markdown 正文再人工粘贴到 `.tex`
 
+```
 4. **LaTeX 编译**（精密渲染）
    - 本地：Texifier 实时预览 或 命令行 `latexmk -pdf`
    - 多人：Overleaf 上传 `.bib` + `.tex`

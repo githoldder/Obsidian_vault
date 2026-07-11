@@ -517,6 +517,6 @@ P0-T1 → P0-T2 → P0-T4 → P1-T1 → P1-T3 → P1-T4 → P2-T1 → P2-T4 → 
 ## 相关笔记
 [[deep-research-report]] — 完整研究规划与技术路线
 [[计算机视觉论文发表规划]] — OKRT 模板与流程参考
-[[DKT&Levenstevin]] — 技术笔记（待填充）
+[[最新前沿（顶会、顶刊）科研成果]] — 技术笔记（待填充）
 
 🏷️: [[LingoBridge]] [[Knowledge Tracing]] [[论文规划]] [[OKRT]] [[任务拆解]] [[编辑距离]] [[项目甘特图]]

@@ -1,0 +1,6 @@
+[shell_environment_policy]
+inherit = "core"
+
+[shell_environment_policy.set]
+ANTHROPIC_BASE_URL = "http://127.0.0.1:15721"
+ANTHROPIC_AUTH_TOKEN = "PROXY_MANAGED"

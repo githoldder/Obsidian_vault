@@ -90,6 +90,13 @@ ditto -c -k --sequesterRsrc /path/src output.zip
 unzip -l output.zip | grep '^[0-9]' | head -5
 ```
 
+命令是：
+
+bash复制
+
+```bash
+zip -r "/Users/caolei/Desktop/thuthesis-manual-writing-kit.zip" "/Users/caolei/Desktop/thuthesis-manual-writing-kit"
+```
 ## 参考资料
 
 - [Zip Specification: Appendix D - UTF-8](https://pkware.cachefly.net/webdocs/casestudies/APPNOTE.TXT)

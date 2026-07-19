@@ -1,29 +1,25 @@
-# 05-governance-core
+# 工作区治理与工程防呆场景包 (05-governance-core)
 
-达尔文机制、工程防呆、命名规范、版本控制、质量审查和 skill 演化治理的场景包。
+> **对应标准 Skill**: `codex-skills/governance-core-pack` (用于 Agent 自动加载)
 
-## 适用场景
+本场景包专注于工作区治理、熵减规则制定、工程操作防呆（Think-Before-Execute）以及 Skill 的持续演化管理。
 
-- 管理 skills 的用进废退、合并、归档、脚本化和常驻位选择。
-- 在修改文件、写代码、迁移目录或建仓前做工程安全检查。
-- 统一文档命名、版本控制、质量审查和 Git checkpoint。
-- 为 `darwin-skill` Full/Pure 发行版提供机制底座。
+---
 
-## 入口文件
+## 1. 结构与文件导航
 
-| 类型 | 文件 |
-|---|---|
-| Agent 入口 | [[00-Projects/000_个人看板/脚手架&通用模版&工具/04-skills/05-governance-core/SKILL]] |
-| 资产清单 | [[00-Projects/000_个人看板/脚手架&通用模版&工具/04-skills/05-governance-core/registry/manifest.json]] |
-| 演化记录 | [[00-Projects/000_个人看板/脚手架&通用模版&工具/04-skills/05-governance-core/registry/evolution_log]] |
-| 变更记录 | [[00-Projects/000_个人看板/脚手架&通用模版&工具/04-skills/05-governance-core/CHANGELOG]] |
+### 1.1 治理与防呆规范 (references/)
+- [[references/think-before-execute-skill]] (工程操作防呆与检查点规范)
+- [[references/darwin-skill-evolution]] (达尔文-Skill 演进思想与熵减法则)
 
-## 主要来源
+### 1.2 系统治理模板 (templates/)
+- [[templates/workspace-agent-governance-system]] (解耦型工作区 Agent 规范与治理系统 - Taste v4.0 Sense)
 
-- `../skills_library/02_工程安全类/`
-- `../skills_library/04_国家标准文档工程化写作规范/08_文档命名与版本控制.md`
-- `../skills_library/04_国家标准文档工程化写作规范/09_文档质量审查清单.md`
-- `../../02-workflows/05_知识管理与效率工具/03_vibe-coding-Git版本管理SOP.md`
-- `../../02-workflows/05_知识管理与效率工具/04_vibe-coding流水线构建与Skill蒸馏.md`
-- `/Users/caolei/Desktop/darwin-skill/skills/`
+### 1.3 质量审计与检查清单 (audit/)
+- [[audit/04-skills-entropy-audit]] (当前工作区的熵增/熵减诊断与审计报告)
 
+---
+
+## 2. 使用方法
+- **AI 协作**：加载标准 Skill `codex-skills/governance-core-pack` 对代码库结构、不规范的文件命名以及没有更新的 `context.txt` 进行巡检。
+- **熵减规则**：结合 `references/darwin-skill-evolution` 指引，对已经臃肿的技能库做进一步蒸馏和重组。

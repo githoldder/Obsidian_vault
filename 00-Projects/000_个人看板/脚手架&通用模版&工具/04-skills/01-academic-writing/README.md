@@ -1,35 +1,31 @@
-# 01-academic-writing
+# 学术写作与论文科研场景包 (01-academic-writing)
 
-课程作业、实验报告、论文科研写作与 LaTeX 交付的场景包。
+> **对应标准 Skill**: `codex-skills/academic-writing-pack` (用于 Agent 自动加载)
 
-## 适用场景
+本场景包专为学术论文发表、课程设计报告、lab-report-template和引用文献整理而设计，将零散的方法论、模板和审核清单进行场景化整合。
 
-- 根据课程题目生成无 Markdown 语法的纯文本作业稿。
-- 按老师给定模板生成实验报告正文、图表占位符和检查清单。
-- 做论文选题、文献检索、证据表、扩写、引用管理和 LaTeX 编译。
-- 生成符合学术规范的 Mermaid、UML、图表说明与参考文献格式。
+---
 
-## 入口文件
+## 1. 结构与文件导航
 
-| 类型 | 文件 |
-|---|---|
-| Agent 入口 | [[00-Projects/000_个人看板/脚手架&通用模版&工具/04-skills/01-academic-writing/SKILL]] |
-| 资产清单 | [[00-Projects/000_个人看板/脚手架&通用模版&工具/04-skills/01-academic-writing/registry/manifest.json]] |
-| 演化记录 | [[00-Projects/000_个人看板/脚手架&通用模版&工具/04-skills/01-academic-writing/registry/evolution_log]] |
-| 变更记录 | [[00-Projects/000_个人看板/脚手架&通用模版&工具/04-skills/01-academic-writing/CHANGELOG]] |
+### 1.1 参考文献与规范 (references/)
+- [[references/academic-doc-standards]] (学术文档规范)
+- [[references/chart-modeling-standards]] (图表与建模规范)
+- [[references/citation-reference-standards]] (引用与参考文献规范)
+- [[references/diagram-generation-prompt]] (UML 制图更新与提示词)
+- [[references/diagram-generation-prompt-v2]] (UML 工程图专用提示词核心逻辑 2.0)
+- [[references/svg-prompt-v2]] (Figma 兼容性 SVG 工程图纸制图规范)
 
-## 主要来源
+### 1.2 通用模板 (templates/)
+- [[templates/course-paper-template]] (课程设计与学术论文 LaTeX/Markdown 模板)
+- [[templates/lab-report-template]] (课程lab-report-template通用模板)
 
-- `../../02-workflows/03_论文科研写作与LaTeX/`
-- `../../02-workflows/00_场景化工作流入口/03_论文科研写作与LaTeX工作流.md`
-- `../skills_library/04_国家标准文档工程化写作规范/03_学术文档规范.md`
-- `../skills_library/04_国家标准文档工程化写作规范/06_图表与建模规范.md`
-- `../skills_library/04_国家标准文档工程化写作规范/07_引用与参考文献规范.md`
-- `../skills_library/04_国家标准文档工程化写作规范/templates/学术类/`
-- `../skills_library/04_国家标准文档工程化写作规范/checklists/毕业论文检查清单.md`
-- `../skills_library/04_国家标准文档工程化写作规范/checklists/引用格式检查清单.md`
+### 1.3 审计与检查清单 (checklists/)
+- [[checklists/course-paper-checklist]] (毕业论文与课程论文格式检查清单)
+- [[checklists/citation-format-checklist]] (学术论文引用格式审核清单)
 
-## 当前策略
+---
 
-本包先作为场景索引和建仓骨架。正式迁移时优先复制模板、检查清单和稳定 SOP；原 Obsidian 文件在链接替换完成前不删除。
-
+## 2. 使用方法
+- **AI 协作**：加载标准 Skill `codex-skills/academic-writing-pack` 对文章或 LaTeX 模板进行检查与扩写。
+- **模板使用**：直接复制 `templates/` 下的模板文件进行内容写作。

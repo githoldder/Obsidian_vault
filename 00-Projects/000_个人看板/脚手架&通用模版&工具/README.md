@@ -1,65 +1,100 @@
-# 脚手架 & 通用模版 & 工具
+# 脚手架 & 通用模板 & 工具
 
-个人技能库、SOP 工作流、学习地图和思维工具的统一入口。
+> **个人知识库、场景化工作流、学习地图与智能体技能库的扁平化重构管理系统。**
 
-```
+---
+
+## 1. 扁平化目录结构
+
+本项目目录层级严格限制在3层以内（不含根目录），消除了深度嵌套和冗余文件：
+
+```text
 脚手架&通用模版&工具/
-├── 01-mind/                          # 思维模型与心智框架
-│   ├── 三大思维模型.png
-│   ├── 如何培养专注力&减少脑补.md
-│   ├── 如何培养微习惯，保持耐心，坚持长期做某事.md
-│   ├── 常见压力、焦虑的产生原因及应对方法.md
-│   └── 管理学思维和技巧.canvas
+├── README.md                          # 统一总入口（本文件）
 │
-├── 02-workflows/                     # 场景化工作流与 SOP
-│   ├── 00_场景化工作流入口/           # 总入口、路线图
-│   ├── 01_vibe-coding产品原型到上线/   # 需求→原型→开发→部署
-│   ├── 02_软件工程文档与交付/          # SRS、设计、测试、部署
-│   ├── 03_论文科研写作与LaTeX/         # 论文全生命周期
-│   ├── 04_项目管理与问题解决/          # Scrum、OKRTS、复盘
-│   ├── 05_知识管理与效率工具/          # PARA、CLI、Git、Skill蒸馏
-│   ├── 调研流程工具箱.canvas
-│   └── 解决问题人脑决策思维流程图.canvas
+├── 01-mind/                          # 思维模式与习惯养成（6个文件）
+│   ├── 01-专注力与脑补对抗.md
+│   ├── 02-微习惯与长期主义.md
+│   ├── 03-焦虑应对速查.md
+│   ├── 04-思维模型图解.png
+│   ├── 05-职场管理思维图谱.canvas
+│   └── 06-每日学习微习惯模板.md       # 从工作流目录迁移，避免同名冲突
 │
-├── 03-learningmaps/                  # 学习路线与知识地图
-│   ├── AI产品经理开发流程.canvas
-│   ├── AI发展史-风格化增强版.canvas
-│   ├── 人工智能发展史及应用技术迭代史.canvas
-│   └── 苍穹外卖项目整体框架图和工作流.canvas
+├── 02-workflows/                     # 场景化工作流与 SOP（32个文件+1个归档目录）
+│   ├── 00-Workflows-Index.md          # 合并：根README与场景化工作流总入口
+│   ├── 01-Product-Dev-Pipeline.md     # 场景入口：Vibe Coding 产品全生命周期
+│   ├── 02-SE-Doc-Delivery.md          # 场景入口：软件工程文档与交付规范
+│   ├── 03-Academic-Writing-Pipeline.md# 场景入口：论文科研写作与 LaTeX
+│   ├── 04-Agile-PM-Workflow.md        # 场景入口：敏捷项目管理与问题解决
+│   ├── 05-Knowledge-Mgmt-Workflow.md  # 场景入口：知识管理与效率工具
+│   ├── 11-Req-Interview-SOP.md        # 合并：需求访谈SOP 与 To B开发SOP
+│   ├── 12-UI-UX-Reference-List.md     # UI-UX 审美参照清单
+│   ├── 13-UI-Taste-Constraint-Skill.md# UI Taste 约束
+│   ├── 14-AI-Figma-SOP.md             # Figma 建模
+│   ├── 15-UI-Audit-Anti-Template-Skill.md # UI 减法审查
+│   ├── 21-Doc-Engineering-Standard.md # 文档工程规范
+│   ├── 31-Paper-Info-Processing.md    # 论文信息处理
+│   ├── 32-Industry-Research-SOP.md    # 行研信源
+│   ├── 33-Paper-Expansion-Guide.md    # 论文扩写
+│   ├── 34-LaTeX-Entry.md              # LaTeX 入口
+│   ├── 35-BibTeX-Lifecycle.md         # 参考文献生命周期
+│   ├── 36-LaTeX-Template-Troubleshoot.md # 模板与排错
+│   ├── 37-LaTeX-Injection-Review-Skill.md # LaTeX 注入审查
+│   ├── 41-Project-Three-Layers.md     # 三层规训框架
+│   ├── 42-BigTech-Agile-Spec.md       # 大厂敏捷规范
+│   ├── 43-Scrum-VibeCoding-Workflow.md# 合并：Vibe-B团队SOP 与 Scrum单人工作流
+│   ├── 44-OKRTS-5W-Framework.md       # 目标拆解与根因分析
+│   ├── 45-Problem-Solving-Methodology.md # 问题解决方法论
+│   ├── 51-PARA-Management.md          # PARA 管理
+│   ├── 52-CLI-Token-Saving.md         # CLI Token 节省
+│   ├── 53-Git-Version-SOP.md          # Git 版本管理
+│   ├── 54-Skill-Distillation.md       # Skill 蒸馏
+│   ├── 55-Harness-Engineering.md      # Harness 工程
+│   ├── 61-Problem-Solving-Mindmap.canvas # 思维流程图
+│   ├── 62-Research-Toolkit.canvas     # 调研工具箱
+│   └── 90-archive/                    # 工作流旧版归档（第3层）
+│       ├── 91-LEGACY-Paper-Info-Old.md
+│       ├── 92-LEGACY-Paper-Expansion-Old.md
+│       └── 93-LEGACY-LaTeX-Basics-Old.md
 │
-├── 04-skills/                        # 场景化 Skillpack 技能库
-│   ├── 01-academic-writing/          # 学术写作与论文科研
-│   ├── 02-project-delivery/          # AI-native 项目交付
-│   ├── 03-tech-sharing/              # 技术分享与调研
-│   ├── 04-presentation-demo/         # 演讲与演示
-│   ├── 05-governance-core/           # 治理、熵减、工程防呆
-│   ├── skills_library/               # 旧原子技能池（参考）
-│   ├── SCENARIO_SKILLPACK_REPO_PLAN.md
-│   └── audit/                        # 熵增/熵减诊断报告
+├── 03-learningmaps/                  # 学习路线与知识地图（3个文件）
+│   ├── 01-AI-PM-Dev-Flow.canvas       # AI产品经理开发流程
+│   ├── 02-AI-History-Tech-Evolution.canvas # 人工智能发展史及技术迭代史
+│   └── 03-苍穹外卖项目工作流.canvas   # 特定项目（苍穹外卖）知识图谱
 │
-├── 附件/                             # 图片与附件资源
-├── _archive/                         # 已归档的历史版本
-│   ├── codex-skills/                 # 旧 Codex 格式技能（已迁移至场景包）
-│   ├── taste-versions/               # Taste v2.0 / v3.0 / 草稿
-│   └── 旧版论文流水线/               # 论文工作流 91~93 旧编号版
+├── 04-skills/                        # 场景化 Skillpack 智能体技能库（最多3层）
+│   ├── README.md                      # 智能体技能总入口（映射规则与配置）
+│   ├── codex-skills/                  # 标准可加载 Skill 层（Agent 加载）
+│   │   ├── academic-writing-pack/
+│   │   ├── project-delivery-pack/
+│   │   ├── tech-sharing-pack/
+│   │   ├── presentation-demo-pack/
+│   │   └── governance-core-pack/
+│   ├── 01-academic-writing/           # 学术写作与论文科研场景包
+│   ├── 02-project-delivery/           # 项目开发与工程交付场景包
+│   ├── 03-tech-sharing/               # 技术分享与分析调研场景包
+│   ├── 04-presentation-demo/          # 汇报演示与PPTX模板场景包
+│   ├── 05-governance-core/            # 工作区治理与工程防呆场景包
+│   └── _archive/                      # 技能库历史归档（第3层）
+│       ├── governance-evolution/      # 治理系统演化历史 (taste v0/v2/v3)
+│       ├── legacy/                    # 旧版规范与旧版 SVG 提示词
+│       └── plans/                     # 历史建仓与治理规划
 │
-└── README.md                         # 本文件
+├── 附件/                              # 概念与架构原理解析图（3个文件）
+│   ├── 01-AI-Tool-Quadrant.png        # AI工具范式特性四象限
+│   ├── 02-AI-Workflow-Construction.png# ai工作流水线构建
+│   └── 03-Agent-Principle-Diagram.png # 智能体工作原理图
+│
+└── _archive/                          # 根级历史归档
+    └── 调研报告/
+        └── zot-cli调研-20260517.md    # 历史 zot-cli 工具调研报告
 ```
 
-## 入口指引
+---
 
-| 你在找的是... | 去这里 |
-|--------------|--------|
-| 学习某个方法/技巧 | `01-mind/` |
-| 执行某个工作流程 | `02-workflows/00_场景化工作流入口/` |
-| 看学习路线图 | `03-learningmaps/` |
-| 用某个 Skill | `04-skills/README.md` |
-| 查旧的参考资料 | `04-skills/skills_library/` |
-| 找历史版本 | `_archive/` |
+## 2. 核心入口指南
 
-## 命名规范
-
-- 区域使用两位编号：`01-04`
-- 子模块使用两位编号 + 英文/中文短名
-- 工作流文件：编号越大 = 越靠后执行，`90+` 为旧版，`99` 为案例
-- 归档目录统一放在 `_archive/` 下按主题分目录
+- **日常学习与习惯打卡**：查看 [[01-mind/README]] 下的思维模型与 [[06-每日学习微习惯模板]]。
+- **执行业务工作流流程**：查看 [[02-workflows/00-Workflows-Index]] 开始选择你的具体场景（产品/文档/论文/管理/工具）。
+- **查看学习知识大图**：查看 [[03-learningmaps/README]] 选择合适的技术路线（AI PM/AI 历史/苍穹外卖）。
+- **让 Agent 加载技能执行任务**：参考 [[04-skills/README]] 中的标准 Skill 映射规则。

@@ -72,7 +72,7 @@
 2. **Obsidian 标注是 Markdown**：天然可以被 Claude Code 索引和理解
 3. **上下文分段**：如果文献量极大（>50篇），先用 Obsidian 标签筛选核心文献再让 Claude 介入
 4. **幻觉检查**：Claude 生成的参考文献必须回查 Zotero 验证
-5. **正文注入禁止 Markdown**：进入 `.tex` 的论文正文必须通过 [[37-LaTeX-Injection-Review-Skill]]，禁止直接复制 AI 输出的 Markdown 自由文本
+5. **正文注入禁止 Markdown**：进入 `.tex` 的论文正文必须通过 [[36-LaTeX-Injection-Review-Skill]]，禁止直接复制 AI 输出的 Markdown 自由文本
 
 ---
 
@@ -110,6 +110,7 @@
 2. 创建 `Blank Project` 或上传模板 zip
 3. 编译：`Cmd+Enter`
 4. 支持中文：导言区加 `\usepackage[UTF8]{ctex}`
+5. 注意选择编译配方建议手动调整成`xelatex → bibtex → xelatex*2`
 
 ### 路径 C：本地模板实践（推荐做学术论文的人）
 
@@ -123,11 +124,11 @@
    ```
 2. **选择场景对应模板**
 
-| 场景              | 路径                                      |
-| --------------- | --------------------------------------- |
-| 学术论文 / 毕业设计     | `packages/cit-scie-thesis-latex`        |
-| 项目文档 / 手册       | `packages/thuthesis-manual-writing-kit` |
-| 课设 PPT / Banner | `packages/czu-beamer-template`          |
+| 场景              | 路径                                                                            |
+| --------------- | ----------------------------------------------------------------------------- |
+| 学术论文 / 毕业设计     | [常工院毕业设计模版](https://github.com/githoldder/cit-scie-thesis-latex)              |
+| 项目文档 / 手册       | [竞赛项目/文档智能助手协助手册](https://github.com/githoldder/thuthesis-manual-writing-kit) |
+| 课设 PPT / Banner | [课程设计/毕业设计演示ppt](https://github.com/githoldder/czu-beamer-template)           |
 3. **编译链**：`xelatex main.tex → bibtex main → xelatex*2`
 
 ### 路径 D：常工院毕设
@@ -166,7 +167,7 @@
 
 ```
 4. **LaTeX 编译**（精密渲染）
-   - 本地：Texifier 实时预览 或 命令行 `latexmk -pdf`
+   - 本地：Texifier/vscode 实时预览 或 命令行 `latexmk -pdf`
    - 多人：Overleaf 上传 `.bib` + `.tex`
 
 ---
@@ -197,4 +198,3 @@
 
 ---
 
-*本文档对应的项目枢纽：`/Users/caolei/Desktop/LatexCenterTool`*

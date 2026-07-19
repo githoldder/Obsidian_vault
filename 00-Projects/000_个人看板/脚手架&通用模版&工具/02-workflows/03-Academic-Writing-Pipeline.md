@@ -43,7 +43,7 @@ Idea
 | LaTeX 工作流判断 | [[34-LaTeX-Entry]] |
 | BibTeX 与参考文献 | [[35-BibTeX-Lifecycle]] |
 | 模板与编译 | [[36-LaTeX-Template-Troubleshoot]] |
-| 结构化注入与双重审查 | [[37-LaTeX-Injection-Review-Skill]] |
+| 结构化注入与双重审查 | [[36-LaTeX-Injection-Review-Skill]] |
 | 图表与建模规范 | `skills_library/04_国家标准文档工程化写作规范/chart-modeling-standards.md` |
 | 引用规范 | `skills_library/04_国家标准文档工程化写作规范/citation-reference-standards.md` |
 

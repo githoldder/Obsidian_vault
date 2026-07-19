@@ -35,7 +35,7 @@
 - [[34-LaTeX-Entry]] (LaTeX 工作流入口)
 - [[35-BibTeX-Lifecycle]] (LaTeX 参考文献生命周期管理)
 - [[36-LaTeX-Template-Troubleshoot]] (LaTeX 模板定制与编译排错)
-- [[37-LaTeX-Injection-Review-Skill]] (LaTeX 结构化注入与双重审查 Skill)
+- [[36-LaTeX-Injection-Review-Skill]] (LaTeX 结构化注入与双重审查 Skill)
 
 ### 2.4 敏捷项目管理与问题解决工作流
 - [[41-Project-Three-Layers]] (项目三层规训框架)

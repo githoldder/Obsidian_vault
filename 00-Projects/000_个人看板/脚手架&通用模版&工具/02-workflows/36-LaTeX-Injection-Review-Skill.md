@@ -121,7 +121,7 @@ Do not judge academic quality.
 
 - [ ] 不含 Markdown 标题 `#`
 - [ ] 不含 Markdown 粗体 `**`
-- [ ] 不含 Markdown 代码围栏
+- [ ] 不含 Markdown 代码围栏"``"
 - [ ] 不含 Markdown 列表污染论文正文
 - [ ] `%` 已写作 `\%`
 - [ ] `&` 已写作 `\&`，除非在表格对齐环境中

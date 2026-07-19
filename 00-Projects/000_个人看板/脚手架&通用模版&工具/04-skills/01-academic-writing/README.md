@@ -12,8 +12,7 @@
 - [[references/academic-doc-standards]] (学术文档规范)
 - [[references/chart-modeling-standards]] (图表与建模规范)
 - [[references/citation-reference-standards]] (引用与参考文献规范)
-- [[references/diagram-generation-prompt]] (UML 制图更新与提示词)
-- [[references/diagram-generation-prompt-v2]] (UML 工程图专用提示词核心逻辑 2.0)
+- [[references/diagram-generation-prompt-v2]] (UML 工程图专用提示词核心逻辑)
 - [[references/svg-prompt-v2]] (Figma 兼容性 SVG 工程图纸制图规范)
 
 ### 1.2 通用模板 (templates/)

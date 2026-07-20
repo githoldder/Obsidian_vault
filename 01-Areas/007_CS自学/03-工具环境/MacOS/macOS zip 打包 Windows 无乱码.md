@@ -90,11 +90,36 @@ ditto -c -k --sequesterRsrc /path/src output.zip
 unzip -l output.zip | grep '^[0-9]' | head -5
 ```
 
-命令是：
+## 如果经常需要打包
 
-```bash
-zip -r "/Users/caolei/Desktop/thuthesis-manual-writing-kit.zip" "/Users/caolei/Desktop/thuthesis-manual-writing-kit"
+可以直接做成一个命令，例如：
+
 ```
+zipwin () {
+    python3 - "$1" <<'PY'
+import os, sys, zipfile
+src = sys.argv[1]
+dst = src.rstrip("/\\") + ".zip"
+with zipfile.ZipFile(dst, "w", zipfile.ZIP_DEFLATED) as z:
+    for root, dirs, files in os.walk(src):
+        rel = os.path.relpath(root, src)
+        if rel != "." and not dirs and not files:
+            z.writestr(os.path.join(src, rel) + "/", "")
+        for f in files:
+            p = os.path.join(root, f)
+            z.write(p, p)
+print(dst)
+PY
+}
+```
+
+以后只需要：
+
+```
+zipwin "/Users/caolei/Desktop/简历材料/25-26年综测/23030301曹磊"
+```
+
+就会直接生成 Windows 兼容的 ZIP。
 ## 参考资料
 
 - [Zip Specification: Appendix D - UTF-8](https://pkware.cachefly.net/webdocs/casestudies/APPNOTE.TXT)

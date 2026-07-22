@@ -252,6 +252,103 @@ unar -o ./extracted "/path/to/file.rar"
 unar -o ./extracted "/Users/caolei/Desktop/springboot-lgg/docs/01-resource/23000001张三.rar"
 ```
 
+## 批量处理 .docx 内容（以任务书为例）
+
+当需要修改 .docx 里的重复标题、删除冗余段落、填充空白内容时，最快的方式是把 .docx 当 ZIP 解压，直接改 `word/document.xml`，再重新打包。
+
+### 适用场景
+
+- 文档里有大段重复标题（如表格表头和正文里各出现一次"一、项目设计内容"）
+- 模板里留了空白段落需要填充内容
+- 需要批量删除某些段落（如错误的 8 周/10 周 sprint，改成 4 周）
+- 格式刷、样式微调
+
+### 操作流程
+
+```bash
+# 1. 创建临时目录并解压 docx
+mkdir -p /tmp/docx_edit && cd /tmp/docx_edit
+rm -rf task_extracted
+python3 - <<'PY'
+import zipfile, os
+src = "/path/to/your.docx"
+dst = "/tmp/docx_edit/task_extracted"
+os.makedirs(dst, exist_ok=True)
+with zipfile.ZipFile(src) as z:
+    z.extractall(dst)
+PY
+
+# 2. pretty-print document.xml，方便人工阅读和编辑
+cd task_extracted/word
+python3 - <<'PY'
+import xml.dom.minidom
+with open('document.xml', 'r', encoding='utf-8') as f:
+    xml_str = f.read()
+dom = xml.dom.minidom.parseString(xml_str)
+pretty = dom.toprettyxml(indent='  ', encoding='utf-8').decode('utf-8')
+lines = [l for l in pretty.splitlines() if l.strip()]
+with open('document.xml', 'w', encoding='utf-8') as f:
+    f.write('\n'.join(lines))
+PY
+
+# 3. 用文本编辑器或脚本修改 document.xml
+# ... 删除重复段落、填充内容、调整 sprint 周期 ...
+
+# 4. 重新打包成 docx
+cd /tmp/docx_edit
+python3 - <<'PY'
+import zipfile, os, shutil
+src_dir = "/tmp/docx_edit/task_extracted"
+out_path = "/path/to/your.docx"
+shutil.copy(out_path, out_path + ".bak")  # 先备份
+with zipfile.ZipFile(out_path, 'w', zipfile.ZIP_DEFLATED) as zf:
+    for root, dirs, files in os.walk(src_dir):
+        for f in files:
+            p = os.path.join(root, f)
+            arc = os.path.relpath(p, src_dir)
+            zf.write(p, arc)
+PY
+```
+
+### 实战案例：任务书去重 + 填充 + 改 sprint 周期
+
+**问题**：
+- "一、项目设计内容""二、设计目标""三、进度目标" 在表头和正文里各出现一次
+- "二、设计目标" 正文只有标题，没有内容
+- "三、进度目标" 里同时存在 4 周版和 8 周版两套 sprint，需要保留 4 周版
+
+**处理思路**：
+1. 定位每个重复标题所在的 `<w:p>...</w:p>` 段落块
+2. 删除正文里的重复标题段落（保留表格表头）
+3. 把"二、设计目标"下面的空段落替换成 4 条设计目标
+4. 删除 8 周版 sprint 的 4 个段落
+
+**验证文本是否改对**：
+
+```bash
+python3 - <<'PY'
+import zipfile, xml.etree.ElementTree as ET
+path = "/path/to/your.docx"
+with zipfile.ZipFile(path) as z:
+    xml = z.read('word/document.xml').decode('utf-8')
+    root = ET.fromstring(xml)
+    ns = {'w': 'http://schemas.openxmlformats.org/wordprocessingml/2006/main'}
+    for i, p in enumerate(root.iter('{http://schemas.openxmlformats.org/wordprocessingml/2006/main}p')):
+        texts = [t.text or '' for t in p.iter('{http://schemas.openxmlformats.org/wordprocessingml/2006/main}t')]
+        para = ''.join(texts).strip()
+        if para:
+            print(f"{i:03d}: {para}")
+PY
+```
+
+### 注意事项
+
+- 修改前务必备份原文件
+- `document.xml` 很大时，先 pretty-print 再编辑，否则一行 XML 很难定位
+- 不要破坏 XML 标签的嵌套结构，尤其注意 `<w:tbl>`、`<w:tr>`、`<w:tc>`、`<w:p>` 的闭合
+- 打包时不要用 macOS 自带"压缩"功能生成 zip，否则会产生 `__MACOSX` 污染；用 Python `zipfile` 重新打包最干净
+- 改完后先用 Word/WPS 打开看一下，确认格式没崩
+
 ## 参考资料
 
 - [Zip Specification: Appendix D - UTF-8](https://pkware.cachefly.net/webdocs/casestudies/APPNOTE.TXT)

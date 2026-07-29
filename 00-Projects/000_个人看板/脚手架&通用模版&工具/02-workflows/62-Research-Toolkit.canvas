@@ -27,7 +27,6 @@
 		{"id":"8e1b87a63ccceb1b","type":"text","text":"sop流程梳理","x":-337,"y":142,"width":250,"height":60},
 		{"id":"3493944ed9c63ebe","type":"text","text":"一、核心搜索语法\n \n语法格式 作用 示例 \n \"xxx\"  限定关键词（PDF可用 ctrl+F ）  \"人工智能\"  \n intitle:xxx  限定标题  intitle:数据分析  \n allintitle:xxx xxx  限定标题多个关键词  allintitle:运营 干货  \n intext:xxx  限定文章内容关键词  intext:Python教程  \n inurl:xxx  限定网址关键词  inurl:CCTV  \n site:xxx  限定网站来源  site:pexels.com  \n xxx imagesize:xxx  限制图片尺寸  elon musk imagesize: 5760x3840  \n xxx filetype:xxx  限制文件格式  大模型 filetype: PDF  \n \n二、场景化搜索渠道\n \n1. 知识技能\n \n- 化妆品成分：国家普通化妆品备案信息\n- 日本产品参数：亚马逊、乐天\n- ChatGPT账号：X（twitter/Youtube）\n- 程序员资源：GitHub、StackOverflow、CSDN\n- 国际论文：谷歌学术、Sci-Hub（仅搜完整题目）\n- 中文电子书：鸠摩搜书\n- 英文电子书：z-lib.is、manybooks.net、pdfbooksworld.com\n- 类似网站：SimilarSites\n \n2. 素材文件\n \n- 免费视频：pexels、pixabay（Youtube加9x可看特殊版本，save.tube下载）\n- 免费音频：pixabay（royalty free BGM）\n- 静态图片：谷歌（配imagesize）、gettyimages（需专用下载器）\n- GIF动图：GIPHY\n- 图标：谷歌（filetype:PNG）、iconfont.cn\n- PPT模板：iSlide插件、canva.com\n \n3. 工具软件\n \n- 设计/脑图：canva.com、miro\n- 抠图：remove.bg\n- 文字转语音：腾讯智影、Azure\n- 视频剪辑：Clipchamp、Flexclip\n- 网速检测：fast.com\n- 链接安全：virustotal.com\n- 虚拟人像：thispersondoesnotexist.com\n- 造词/未来写信：litscape.com、futureme.org\n- 生产力软件/插件：alternativeto.net、Chrome插件商店（搜best chorme extension productivity）\n \n4. AIGC工具\n \n- ChatGPT：搜索、对比、推理（按 space 唤AI， / 调命令）\n ","x":269,"y":240,"width":552,"height":520},
 		{"id":"0eb8658d7029e3f0","type":"text","text":"搭建个人信息系统","x":-175,"y":555,"width":250,"height":60},
-		{"id":"97ab35f73dcff976","type":"file","file":"00-Projects/000_个人看板/脚手架&通用模版&工具/附件/02-AI-Workflow-Construction.png","x":269,"y":1160,"width":967,"height":786},
 		{"id":"7e42b56e075c7d28","type":"file","file":"01-Areas/007_CS自学/02-编程语言/node.js/附件/frontend-engineering-panorama.svg","x":-600,"y":1400,"width":740,"height":524}
 	],
 	"edges":[
@@ -58,6 +57,7 @@
 		{"id":"4d5228be4131e31b","fromNode":"0022137831ae5a2e","fromSide":"left","toNode":"9d5a6a713e8b475c","toSide":"right"},
 		{"id":"5a59274cd87a3873","fromNode":"56e51c77d268acba","fromSide":"bottom","toNode":"3493944ed9c63ebe","toSide":"top"},
 		{"id":"a19d939ea3684d1a","fromNode":"d2d188fa05a5ce5e","fromSide":"bottom","toNode":"0eb8658d7029e3f0","toSide":"top"},
-		{"id":"055eae6838420709","fromNode":"0eb8658d7029e3f0","fromSide":"bottom","toNode":"465358c77299980b","toSide":"top"}
+		{"id":"055eae6838420709","fromNode":"0eb8658d7029e3f0","fromSide":"bottom","toNode":"465358c77299980b","toSide":"top"},
+		{"id":"24724d63fab7d7cc","fromNode":"465358c77299980b","fromSide":"bottom","toNode":"7e42b56e075c7d28","toSide":"top"}
 	]
 }

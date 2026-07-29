@@ -1,15 +1,11 @@
 {
 	"nodes":[
 		{"id":"7675a9b8d5db5c8c","type":"group","x":-60,"y":-284,"width":4390,"height":1142,"label":"人工智能学术研究发展（起源与定义）"},
+		{"id":"d3f196c7e91409ea","type":"group","x":140,"y":980,"width":1390,"height":1220,"label":"人工智能应用工具发展"},
 		{"id":"58bcba4a2e6a8404","type":"group","x":1220,"y":1360,"width":290,"height":344,"label":"API"},
 		{"id":"e1a61e947fbcffe2","type":"group","x":160,"y":1406,"width":370,"height":252,"label":"LLM"},
 		{"id":"3905f74f1ef5493a","type":"group","x":220,"y":1464,"width":290,"height":174,"label":"memory"},
 		{"id":"7d8934519cc3d8c9","type":"group","x":840,"y":1464,"width":215,"height":194,"label":"智能体"},
-		{"id":"d3f196c7e91409ea","type":"group","x":140,"y":980,"width":1390,"height":1220,"label":"人工智能应用工具发展"},
-		{"id":"480e73204389d19f","type":"text","text":"CLI","x":562,"y":1120,"width":250,"height":134},
-		{"id":"5bfe580a0aeccd40","type":"text","text":"IDE","x":812,"y":1120,"width":250,"height":134},
-		{"id":"7707d9982834cfca","type":"text","text":"人","x":812,"y":1000,"width":250,"height":60},
-		{"id":"cc0bab8fa8518ca8","type":"text","text":"电脑桌面助手","x":1062,"y":1120,"width":250,"height":134},
 		{"id":"d3643097072ec049","type":"text","text":"神经网络","x":2860,"y":307,"width":250,"height":60},
 		{"id":"983c030c98fddacc","type":"text","text":"深度学习的重要课题：\n如何设计好更好更强大的模型结构","x":3200,"y":290,"width":250,"height":94},
 		{"id":"b2e8eeba616e978b","type":"text","text":"**前馈神经网络（FNN）**：更广义的概念，指信息只从输入层流向输出层，没有循环连接的任何神经网络。\n## 具体区别\n\n|特征|多层感知机（MLP）|前馈神经网络（FNN）|\n|---|---|---|\n|**定义**|由多个全连接层组成的神经网络|任何信息单向传播的神经网络|\n|**范围**|FNN的一个子集|包含MLP在内的更广泛类别|\n|**结构**|必须使用全连接层|可以是全连接、卷积、其他层|\n|**典型应用**|表格数据分类、回归|图像、文本、语音等各种任务|","x":2456,"y":480,"width":308,"height":358},
@@ -39,22 +35,26 @@
 		{"id":"97940393f0518ad4","type":"text","text":"智能的定义\n [02:41](https://www.bilibili.com/video/BV1atCRYsE7x?t=161.116642#t=02:41.12) \n智能本质上就是针对不同情景给出针对性的输出反应","x":640,"y":-264,"width":250,"height":130,"color":"3"},
 		{"id":"e08361f12399296b","type":"text","text":"1956年 达特茅斯会议\n[00:51](https://www.bilibili.com/video/BV1atCRYsE7x?t=51.804123#t=51.80)","x":284,"y":60,"width":250,"height":60},
 		{"id":"a2bdb025461230b7","type":"text","text":"多层感知机**MLP**[^1]\n [26:01](https://www.bilibili.com/video/BV1atCRYsE7x?t=1561.035336#t=26:01.04) \n 解决了感知机无法进行异或操作的缺陷\n\n[^1]: MLP是FNN的一种具体实现形式，是FNN中最经典、最基础的一种结构，特指由全连接层组成的FNN\n","x":2480,"y":267,"width":260,"height":140},
+		{"id":"cc0bab8fa8518ca8","type":"text","text":"电脑桌面助手","x":1062,"y":1120,"width":250,"height":134},
 		{"id":"eaa30026488971f1","type":"text","text":"agent","x":806,"y":2120,"width":250,"height":60},
 		{"id":"415f0c89ee0452fc","type":"text","text":"skill","x":806,"y":2040,"width":250,"height":60},
 		{"id":"b12b75a7ff7ed752","type":"text","text":"workflow","x":806,"y":1940,"width":250,"height":60},
-		{"id":"9424fa8855c80f7a","type":"text","text":"SKILL.md","x":823,"y":1738,"width":250,"height":50},
 		{"id":"94bd9b5fa23632d9","type":"text","text":"langchain","x":806,"y":1840,"width":250,"height":60},
-		{"id":"260f1360efd41681","type":"file","file":"000_个人看板/脚手架&通用模版&工具/附件/AI工具范式特性四象限.png","x":240,"y":2320,"width":1200,"height":815},
-		{"id":"90b820cf13b13786","type":"text","text":"context","x":240,"y":1484,"width":250,"height":60},
-		{"id":"985ff534a94edc70","type":"text","text":"prompt","x":240,"y":1558,"width":250,"height":60},
 		{"id":"ce108165b461adce","type":"text","text":"pdf转换","x":1240,"y":1380,"width":250,"height":60},
 		{"id":"fdde04c070d9a485","type":"text","text":"上网搜索","x":1240,"y":1545,"width":250,"height":50},
 		{"id":"9a6b598ae5e59f94","type":"text","text":"命令行调用","x":1240,"y":1460,"width":250,"height":60},
 		{"id":"1f3664e9944005f9","type":"text","text":"RAG（检索增强生成）","x":1240,"y":1624,"width":250,"height":60},
+		{"id":"480e73204389d19f","type":"text","text":"CLI","x":562,"y":1120,"width":250,"height":134},
+		{"id":"5bfe580a0aeccd40","type":"text","text":"IDE","x":812,"y":1120,"width":250,"height":134},
+		{"id":"7707d9982834cfca","type":"text","text":"人","x":812,"y":1000,"width":250,"height":60},
 		{"id":"9f9ee6bb155f5e50","type":"text","text":"sub agent","x":853,"y":1574,"width":84,"height":50},
 		{"id":"712ed5debbe7355d","type":"text","text":"主Agent","x":877,"y":1484,"width":120,"height":60},
 		{"id":"d947f48f322f67c3","type":"text","text":"sub agent","x":950,"y":1574,"width":90,"height":50},
-		{"id":"1f6fa80bd78d9bbb","type":"file","file":"000_个人看板/脚手架&通用模版&工具/附件/智能体工作原理图.png","x":1720,"y":961,"width":1649,"height":1269}
+		{"id":"9424fa8855c80f7a","type":"text","text":"SKILL.md","x":823,"y":1738,"width":250,"height":50},
+		{"id":"90b820cf13b13786","type":"text","text":"context","x":240,"y":1484,"width":250,"height":60},
+		{"id":"985ff534a94edc70","type":"text","text":"prompt","x":240,"y":1558,"width":250,"height":60},
+		{"id":"0d437d0426f00011","x":299,"y":2400,"width":1193,"height":810,"type":"file","file":"00-Projects/000_个人看板/脚手架&通用模版&工具/附件/01-AI-Tool-Quadrant.png"},
+		{"id":"4f049f1d73bceb97","x":1730,"y":966,"width":1870,"height":1439,"type":"file","file":"00-Projects/000_个人看板/脚手架&通用模版&工具/附件/03-Agent-Principle-Diagram.png"}
 	],
 	"edges":[
 		{"id":"a650cbbb7f9aba85","fromNode":"b474d90e259f201c","fromSide":"right","toNode":"e379787e5d268b68","toSide":"left"},
@@ -107,7 +107,7 @@
 		{"id":"e08d599e48857d32","fromNode":"94bd9b5fa23632d9","fromSide":"bottom","toNode":"b12b75a7ff7ed752","toSide":"top"},
 		{"id":"32810cf92f0e6c29","fromNode":"b12b75a7ff7ed752","fromSide":"bottom","toNode":"415f0c89ee0452fc","toSide":"top"},
 		{"id":"198e159959ebfe1b","fromNode":"415f0c89ee0452fc","fromSide":"bottom","toNode":"eaa30026488971f1","toSide":"top"},
-		{"id":"8aed89ebe6508e99","fromNode":"d3f196c7e91409ea","fromSide":"right","toNode":"1f6fa80bd78d9bbb","toSide":"left"},
-		{"id":"6b0dcd5ddadfffec","fromNode":"d3f196c7e91409ea","fromSide":"bottom","toNode":"260f1360efd41681","toSide":"top"}
+		{"id":"457896161847383a","fromNode":"d3f196c7e91409ea","fromSide":"bottom","toNode":"0d437d0426f00011","toSide":"top"},
+		{"id":"f2e54de9c4d1ac1e","fromNode":"d3f196c7e91409ea","fromSide":"right","toNode":"4f049f1d73bceb97","toSide":"left"}
 	]
 }

@@ -2016,8 +2016,8 @@ python compare_results.py --expected results/expected_main.json --actual results
 ---
 
 ## 相关笔记
-- [[LingoBridge论文全流程任务规划]] — 22 周甘特图与关键路径
-- [[deep-research-report]] — 选题重构与技术路线
-- [[计算机视觉论文发表规划]] — OKRT 模板与流程参考
+- [[01_全流程任务规划_LingoBridge]] — 22 周甘特图与关键路径
+- [[00_选题与研究规划_LingoBridge]] — 选题重构与技术路线
+- [[90_计算机视觉论文发表规划]] — OKRT 模板与流程参考
 
 🏷️: [[LingoBridge]] [[Knowledge Tracing]] [[实验指导]] [[特征工程]] [[数据科学]] [[消融实验]] [[论文图表]]

@@ -1,5 +1,11 @@
 # LingoBridge 论文研究规划报告
 
+> 🔴 **修订注记（2026-08-16）**：本报告原主线为「字符级 Edit-aware KT」，依赖**自由文本答题数据**（learner_answer / answer_text）。经逐一核实，主流 KT 数据集均无自由文本——EdNet 的 `user_answer` 是选择题选项字符 a~d，ASSISTments2017 仅含 skill_id + correct 无任何文本字段。**字符级编辑特征主实验数据缺失，原路线无法落地。**
+>
+> **主线转向**：改为「**音素级 Edit-aware KT**」。发音评测数据天然携带逐音素的正确/错误标注，等价于更本质的编辑距离信号，无需自由文本。首选数据集 **speechocean762**（250 名非母语说话人、5000 句、句/词/音素三级标注，`phones-accuracy` + `mispronunciations`，免费商用）。arXiv 交叉检索 `"pronunciation assessment" AND "knowledge tracing"` = **0 结果**，属完全空白方向。
+>
+> 详见：`LingoBridge论文_音素级知识追踪落地方案_20260816.md`。下文保留原「字符级 Edit-aware」论述，二者统一在「误差轨迹（error trajectory）」框架下：**文本分支（拼写/填空）待有自由文本数据时再启用，音素分支（发音）作为当前可落地主线**。
+
 ## Executive summary
 
 如果你的目标是在 **LingoBridge** 这个半成品项目上，尽快做出一篇“能复现、能解释、能投稿”的论文，而不是做一个概念很大但难以落地的系统，那么最优策略不是一上来做“纯 LLM 教学智能体”，而是走一条**混合式主线**：以 **DKT/KT 作为可验证的学习状态建模骨架**，以 **Levenshtein 及其派生编辑特征**作为自由文本或发音错误的低成本、强解释性诊断信号，再把你称为“智能涌现（atoa）”的方向**操作化为多智能体协作式干预层**，用于生成反馈、选择练习路径、解释错误，而不是替代底层预测模型。这样做的原因很直接：KT 领域最近几年的共识是，评价协议如果不严谨很容易“虚高”，而像 `simpleKT`、`sparseKT` 这类简单但强的基线在公开数据上已经很难被随便超过；与此同时，最新的 FoundationalASSIST 结果说明，前沿大模型在“直接做 KT”这件事上并不可靠，至少目前还不应该把它当作唯一主干。citeturn18academia0turn17academia2turn18academia2turn38academia0turn30academia2
@@ -25,6 +31,8 @@
 第四，**为什么不建议你直接走“纯 LLM-KT”**。原因不是这个方向没价值，而是当前证据并不稳定。一方面，SINKT、LLM-KT 这类工作显示，引入题目语义、概念结构和 LLM 编码可以显著改善冷启动与归纳泛化；另一方面，FoundationalASSIST 的结果又明确指出，当前前沿大模型在 KT 和 pedagogical grounding 上仍然存在明显短板。换句话说，**最安全的研究策略不是让 LLM 取代 KT，而是让它服务 KT**：做题目语义编码、难度解释、反馈生成或者 agent policy，而把预测主干仍然放在可控、可复现的序列模型上。citeturn30academia0turn31academia1turn38academia0
 
 基于这四点，我建议你的论文问题陈述直接写成下面这种形式：
+
+> 🔴 **修订（2026-08-16）**：RQ 表中「编辑距离/编辑操作特征」的载体由「自由文本」改为「音素级标注」（speechocean762 的 `phones-accuracy` / `mispronunciations`），其余不变。
 
 | 研究问题 | 你真正要验证的东西 | 论文价值 |
 |---|---|---|
@@ -57,6 +65,8 @@
 | 方案 | 标题草案 | 技术复杂度 | 创新强度 | 三个月内完成概率 | 稿件形态 |
 |---|---|---:|---:|---:|---|
 | 首选 | **Edit-aware simpleKT for Language Learning** | 低到中 | 中 | 很高 | 工程型、实验型 |
+
+> 🔴 **修订（2026-08-16）**：首选标题草案由「Edit-aware simpleKT for Language Learning」进一步收敛为「**Phoneme-level Knowledge Tracing**」方向，即 **《Phoneme-level Knowledge Tracing: Modeling Pronunciation Skill Acquisition with Edit-aware Sequence Features》**。骨架不变（simpleKT/sparseKT），仅将「字符编辑距离」替换为「音素编辑距离」。
 | 平衡 | **Edit-aware sparseKT with Semantic Item Encoder** | 中 | 中到高 | 中高 | 方法型、泛化型 |
 | 进取 | **Knowledge Tracing Guided Multi-Agent Tutoring** | 高 | 高 | 中 | 系统型、用户实验型 |
 

@@ -32,6 +32,7 @@
 | Git 版本管理 | [[53-Git-Version-SOP]] |
 | Skill 蒸馏 | [[54-Skill-Distillation]] |
 | Agent 长任务 | [[55-Harness-Engineering]] |
+| Karpathy 编码约束 | [[56-Karpathy-Coding-Guidelines]] |
 
 ---
 

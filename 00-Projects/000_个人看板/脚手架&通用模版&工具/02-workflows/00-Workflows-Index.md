@@ -12,7 +12,7 @@
 | **软件工程文档与交付** | [[02-SE-Doc-Delivery]] | 文档工程化写作规范、SRS、概要设计、详细设计、测试报告等模板 |
 | **论文科研与 LaTeX 写作** | [[03-Academic-Writing-Pipeline]] | 文献信息处理、行研信源、论文扩写、LaTeX工作流入口、参考文献管理 |
 | **敏捷项目管理与问题解决** | [[04-Agile-PM-Workflow]] | 项目三层规训、大厂敏捷规范、Scrum+Vibe-Coding个人团队工作流、OKRTS+5W |
-| **知识管理与效率工具** | [[05-Knowledge-Mgmt-Workflow]] | PARA管理、CLI Token节省、Git版本管理、Skill蒸馏、Harness工程规范 |
+| **知识管理与效率工具** | [[05-Knowledge-Mgmt-Workflow]] | PARA管理、CLI Token节省、Git版本管理、Skill蒸馏、Harness工程规范、Karpathy编码约束 |
 
 ---
 
@@ -50,6 +50,7 @@
 - [[53-Git-Version-SOP]] (vibe-coding Git 版本管理 SOP)
 - [[54-Skill-Distillation]] (vibe-coding 流水线构建与 Skill 蒸馏)
 - [[55-Harness-Engineering]] (vibe-coding Harness 工程规范)
+- [[56-Karpathy-Coding-Guidelines]] (Karpathy 编码约束规范 — Token 经济学最高层级技巧)
 
 ---
 

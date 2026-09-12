@@ -263,9 +263,13 @@ playwright-cli eval "document.querySelectorAll('.item').length"
 ├── 数据采集skill库/
 │   ├── 价格爬取skill.md
 │   └── 库存监控skill.md
-└── 文档生成skill库/
-    └── 周报自动生成skill.md
+├── 文档生成skill库/
+│   └── 周报自动生成skill.md
+└── 编码约束skill库/
+    └── karpathy-guidelines.md  ← Token 经济学最高层级
 ```
+
+> **注意**: Skill 固化前，先用 [[56-Karpathy-Coding-Guidelines]] 原则 2（极简优先）审视 Skill 本身是否过度设计。一个优秀的 Skill 应该是"刚好够用"，而非"预留所有可能"。
 
 ---
 

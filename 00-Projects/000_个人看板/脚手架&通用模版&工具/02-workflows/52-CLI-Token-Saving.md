@@ -190,6 +190,7 @@ valyu --version 2>/dev/null && echo "✅ valyu OK" || echo "❌ valyu 未装"
 国外部署：  vercel, wrangler, firebase
 测试：      playwright, duckdb
 图表：      mmdc, d2
+编码约束：  karpathy-guidelines（Layer 4，根因治理）
 ```
 
 ---
@@ -207,4 +208,17 @@ valyu --version 2>/dev/null && echo "✅ valyu OK" || echo "❌ valyu 未装"
 
 ---
 
-*Last updated: 2026-05-17 | 关联流水线：zot → PDF++ → Claude Code → LaTeX*
+## Token 经济学层级对照
+
+| 层级 | 策略 | 节省比例 | 关联文件 |
+|------|------|---------|---------|
+| Layer 4 (最高) | Karpathy 编码约束规范 | 10x ~ 100x | [[56-Karpathy-Coding-Guidelines]] |
+| Layer 3 | Skill 蒸馏 + 脚本固化 | 10x | [[54-Skill-Distillation]] |
+| Layer 2 | CLI 替代 GUI + 工具链优化 | 4x | 本文 |
+| Layer 1 (基础) | 模型选择 + Prompt 优化 | 2x | - |
+
+> **关键洞察**: Layer 4 是在任务源头消除错误，ROI 最高。与 Layer 2 叠加使用，总节省可达 **40x ~ 400x**。
+
+---
+
+*Last updated: 2026-09-12 | 关联流水线：zot → PDF++ → Claude Code → LaTeX*

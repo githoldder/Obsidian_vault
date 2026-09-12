@@ -35,6 +35,17 @@ Layer 3（测试维护层）  ←→  人（AI 设计测试，开发人员集成
   - 低优先级经验/历史日志 -> `memory.md`
   - 随后清理重置 `context.txt`。
 
+### 2.3 Karpathy 编码约束规范（Token 经济学最高层级）
+
+> 所有 AI 生成代码的环节必须遵循 [[56-Karpathy-Coding-Guidelines]] 四大原则：
+
+| 阶段 | 应用原则 | 具体操作 |
+|------|---------|---------|
+| **Sprint Planning** | Think Before Coding | 需求澄清检查清单，有歧义不上手 |
+| **Daily 开发** | Simplicity First + Surgical Changes | 最小可行实现，只改该改的 |
+| **Code Review** | Goal-Driven Execution | 测试通过才算完成，有明确验收标准 |
+| **Sprint Review** | 四大原则复盘 | 统计返工率、副作用引入率、调试轮数 |
+
 ---
 
 ## 三、Sprint 周期结构 (1周迭代)

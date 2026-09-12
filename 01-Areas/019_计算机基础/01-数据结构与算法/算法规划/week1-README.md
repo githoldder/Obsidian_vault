@@ -1,3 +1,12 @@
+---
+type: concept
+subject: 数据结构
+status: 未开始
+mastery: 0
+tags: []
+created: 2026-09-12
+updated: 2026-09-12
+---
 # Week1 — C++ 快速环境与练习
 
 本目录为第一周（W1）练习的代码与构建脚本，包含：

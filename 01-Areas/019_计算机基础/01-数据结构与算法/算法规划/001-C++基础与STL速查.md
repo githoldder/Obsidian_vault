@@ -1,3 +1,12 @@
+---
+type: concept
+subject: 数据结构
+status: 未开始
+mastery: 0
+tags: []
+created: 2026-09-12
+updated: 2026-09-12
+---
 # 001-C++基础与STL速查
 
 > 西蒙学习法·输入阶段 | 目标：30分钟内掌握竞赛编程必备C++基础

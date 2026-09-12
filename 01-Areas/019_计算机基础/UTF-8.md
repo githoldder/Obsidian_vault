@@ -1,3 +1,12 @@
+---
+type: concept
+subject: 未分类
+status: 未开始
+mastery: 0
+tags: []
+created: 2026-09-12
+updated: 2026-09-12
+---
 # UTF-8
 
 UTF-8 是一种**可变长度**的字符编码，用于在计算机中表示 Unicode 字符。

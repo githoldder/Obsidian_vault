@@ -1,3 +1,12 @@
+---
+type: concept
+subject: 计网
+status: 未开始
+mastery: 0
+tags: []
+created: 2026-09-12
+updated: 2026-09-12
+---
 # HTTPS（超文本传输安全协议）
 
 ## 📖 定义-解释-示例

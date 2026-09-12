@@ -314,16 +314,16 @@ alwaysApply: true
 
 在 4 条基础上追加 8 条，针对 Agent 时代的新失败模式（Agent 冲突、hook 级联、Skill 加载冲突、跨 Session 工作流断裂）：
 
-| # | 规则 | 针对问题 | 核心要求 |
-|---|------|---------|---------|
-| 5 | **Use the model only for judgment calls** | 用模型做非语言工作（路由/重试/状态码处理） | 分类/起草/总结/提取用模型；路由/重试/确定性转换用代码 |
-| 6 | **Hard token budgets** | Agent 循环无限制消耗 Token | 简单任务 ≤8K；标准任务 ≤20K；复杂任务 ≤40K；超预算停下询问 |
-| 7 | **Surface conflicts, don't average them** | 两处代码矛盾时取平均 | 标记冲突并问该遵循哪个；不混合成「两边都满足」的烂代码 |
-| 8 | **Read before you write** | 未读邻接文件就添加代码 | 读文件 exports、直接调用方、共享工具；不懂就问 |
-| 9 | **Tests verify intent, not just behavior** | 通过测试即万事大吉 | 测试必须编码「为什么重要」；业务逻辑变时测试必须能失败 |
-| 10 | **Checkpoint after every significant step** | 长操作无检查点 | 每步后总结已完成/已验证/待完成；无法描述状态就停下 |
-| 11 | **Convention beats novelty** | 引入新风格与既有模式冲突 | 成熟代码库中匹配既有模式，即使有「更好」的；分歧另开对话 |
-| 12 | **Fail visibly, not silently** | 把绕过的当成功 | 暴露每条跳过记录/回滚事务/约束违反；绝不静默失败 |
+| #   | 规则                                          | 针对问题                   | 核心要求                                 |
+| --- | ------------------------------------------- | ---------------------- | ------------------------------------ |
+| 5   | **Use the model only for judgment calls**   | 用模型做非语言工作（路由/重试/状态码处理） | 分类/起草/总结/提取用模型；路由/重试/确定性转换用代码        |
+| 6   | **Hard token budgets**                      | Agent 循环无限制消耗 Token    | 简单任务 ≤8K；标准任务 ≤20K；复杂任务 ≤40K；超预算停下询问 |
+| 7   | **Surface conflicts, don't average them**   | 两处代码矛盾时取平均             | 标记冲突并问该遵循哪个；不混合成「两边都满足」的烂代码          |
+| 8   | **Read before you write**                   | 未读邻接文件就添加代码            | 读文件 exports、直接调用方、共享工具；不懂就问          |
+| 9   | **Tests verify intent, not just behavior**  | 通过测试即万事大吉              | 测试必须编码「为什么重要」；业务逻辑变时测试必须能失败          |
+| 10  | **Checkpoint after every significant step** | 长操作无检查点                | 每步后总结已完成/已验证/待完成；无法描述状态就停下           |
+| 11  | **Convention beats novelty**                | 引入新风格与既有模式冲突           | 成熟代码库中匹配既有模式，即使有「更好」的；分歧另开对话         |
+| 12  | **Fail visibly, not silently**              | 把绕过的当成功                | 暴露每条跳过记录/回滚事务/约束违反；绝不静默失败            |
 
 **关键实测数据**（Mnimiy, 30 codebases × 50 tasks）：
 - 无 CLAUDE.md：错误率 ~41%

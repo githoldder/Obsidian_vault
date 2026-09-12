@@ -10,3 +10,4 @@ Scope:
 - reusable templates and external reference materials
 
 This repository may contain more binary material than the others. Keep generated caches and local application state out of Git.
+

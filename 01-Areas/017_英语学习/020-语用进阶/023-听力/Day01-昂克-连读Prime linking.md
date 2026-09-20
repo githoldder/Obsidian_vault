@@ -32,6 +32,8 @@
 ![[mx-img-xsbjwgcxbyj0xpaipypj7d3f-pt18m8_02s.png|第01讲 一张图告诉你英语该怎么学 | 英语学习方法论 - 18:08]][18:08](https://www.bilibili.com/video/BV1jE41157bX?t=1088.987282#t=18:08.99)
 **记忆-运用**
 
+### 音标
+![[mx-img-isl1cykqcpdkf7df5ek9ks5k-pt15_95s.png|【1】前言 防踩坑指南 带你避开所有误区 | 英语音标串讲 美式KK音标 - 00:15]][00:15](https://www.bilibili.com/video/BV1X5411Z7uw?t=15.947753#t=00:15.95)
 
 ## 核心规则
 辅音结尾 + 元音开头 → 连读成一个音节

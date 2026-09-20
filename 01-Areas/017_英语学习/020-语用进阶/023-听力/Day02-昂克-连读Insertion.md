@@ -1,7 +1,8 @@
 # Day02 昂克英文君：连读 Insertion（元+元添加连读）
 
 ## 视频
-[【最全英语连读规则】(02 Insertion 添加连读)](https://www.bilibili.com/video/BV1jE41157bX?p=2)
+![[mx-img-ela9lq18vokwds1x8c0a833k-pt10_46s.png|第01讲 一张图告诉你英语该怎么学 | 英语学习方法论 - 00:10]][00:11](https://www.bilibili.com/video/BV1P7411U7vB?t=11.016513#t=00:11.02)
+
 
 ## 核心规则
 元音结尾 + 元音开头 → 中间加 /j/ 或 /w/

@@ -4,6 +4,26 @@
 ![[mx-img-ela9lq18vokwds1x8c0a833k-pt10_46s.png|第01讲 一张图告诉你英语该怎么学 | 英语学习方法论 - 00:10]][00:11](https://www.bilibili.com/video/BV1P7411U7vB?t=11.016513#t=00:11.02)
 
 
+### Dictation 6
+![[mx-img-khnpukr9t92yqzvobajg6w66-pt15_51s.png|Daily English Dictation 7 - 每日英语听写 Daily English Dictation 1-400 - 00:15]][00:15](https://www.bilibili.com/video/BV1U7411a7xG?p=7&t=15.512405#t=00:15.51)
+the secret of life is just live every moment
+
+**连读**
+secre of 
+just juss
+to->t
+liv every
+
+### Dictation 7
+another row trader has crossed the back  billion dollars
+
+![[mx-img-xnj3sunr8z3e65f90ki53h80-pt14_23s.png|Daily English Dictation 8 - 每日英语听写 Daily English Dictation 1-400 - 00:14]][00:16](https://www.bilibili.com/video/BV1U7411a7xG?p=8&t=16.113222#t=00:16.11)
+another rogue trader has cost a bank billions.
+risky evil
+
+piercings 穿孔
+
+### 
 ## 核心规则
 元音结尾 + 元音开头 → 中间加 /j/ 或 /w/
 

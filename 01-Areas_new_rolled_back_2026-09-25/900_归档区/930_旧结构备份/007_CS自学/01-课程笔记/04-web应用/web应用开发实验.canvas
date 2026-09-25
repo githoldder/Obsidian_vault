@@ -1,0 +1,35 @@
+{
+	"nodes":[
+		{"id":"a67fab904982cfde","x":448,"y":-444,"width":250,"height":60,"type":"text","text":"html"},
+		{"id":"8f92796bc57880eb","x":448,"y":-325,"width":250,"height":60,"type":"text","text":"css"},
+		{"id":"631fa604bdd4d93d","x":448,"y":-195,"width":250,"height":60,"type":"text","text":"javascript"},
+		{"id":"d50a49c2dbcac231","x":120,"y":-325,"width":250,"height":60,"type":"text","text":"web应用开发"},
+		{"id":"763347b1473f1bdc","x":448,"y":-80,"width":250,"height":60,"type":"text","text":"VBscript"},
+		{"id":"6a33ae5b1b1350c8","x":-320,"y":-767,"width":250,"height":60,"type":"text","text":"xml"},
+		{"id":"1a6914995645c9e5","x":-320,"y":-668,"width":250,"height":60,"type":"text","text":"dom"},
+		{"id":"d4bb038b2b7b9233","x":-320,"y":-548,"width":250,"height":60,"type":"text","text":"lls"},
+		{"id":"c949737e2abee0d5","x":-320,"y":-444,"width":250,"height":60,"type":"text","text":"tomcat"},
+		{"id":"a592c8a6b5560c40","x":-322,"y":-240,"width":250,"height":60,"type":"text","text":".NET服务器端控件"},
+		{"id":"d57843207cdd8343","x":-322,"y":-20,"width":250,"height":60,"type":"text","text":"asp"},
+		{"id":"96e0e4c79d15d57e","x":-322,"y":-120,"width":250,"height":60,"type":"text","text":"ado主要对象"},
+		{"id":"a97f1ec29f5f44c1","x":-320,"y":100,"width":250,"height":60,"type":"text","text":"jsp"},
+		{"id":"0c6ddd288affe777","x":-320,"y":203,"width":250,"height":60,"type":"text","text":"servlet"}
+	],
+	"edges":[
+		{"id":"c7b4a68f26f08788","fromNode":"d50a49c2dbcac231","fromSide":"right","toNode":"a67fab904982cfde","toSide":"left"},
+		{"id":"848dc120cd2caf1b","fromNode":"d50a49c2dbcac231","fromSide":"right","toNode":"8f92796bc57880eb","toSide":"left"},
+		{"id":"34439b46f6364cef","fromNode":"d50a49c2dbcac231","fromSide":"right","toNode":"631fa604bdd4d93d","toSide":"left"},
+		{"id":"bf819a7c31cb503b","fromNode":"631fa604bdd4d93d","fromSide":"bottom","toNode":"763347b1473f1bdc","toSide":"top","fromEnd":"arrow"},
+		{"id":"6ddd20dbe600fb52","fromNode":"d50a49c2dbcac231","fromSide":"left","toNode":"6a33ae5b1b1350c8","toSide":"right"},
+		{"id":"0c16c0c5dacaeb6b","fromNode":"d50a49c2dbcac231","fromSide":"left","toNode":"1a6914995645c9e5","toSide":"right"},
+		{"id":"a4c172601a3dfdc7","fromNode":"6a33ae5b1b1350c8","fromSide":"bottom","toNode":"1a6914995645c9e5","toSide":"top","fromEnd":"arrow"},
+		{"id":"8c192772f2638260","fromNode":"d4bb038b2b7b9233","fromSide":"bottom","toNode":"c949737e2abee0d5","toSide":"top","fromEnd":"arrow"},
+		{"id":"50140217ebba36e5","fromNode":"d50a49c2dbcac231","fromSide":"left","toNode":"d4bb038b2b7b9233","toSide":"right"},
+		{"id":"0fd9723e379379a4","fromNode":"d50a49c2dbcac231","fromSide":"left","toNode":"c949737e2abee0d5","toSide":"right"},
+		{"id":"2b6a4f887c44a5e3","fromNode":"d50a49c2dbcac231","fromSide":"left","toNode":"a592c8a6b5560c40","toSide":"right"},
+		{"id":"edb1bd05c9cf7656","fromNode":"d50a49c2dbcac231","fromSide":"left","toNode":"96e0e4c79d15d57e","toSide":"right"},
+		{"id":"75ebeb394100d3d9","fromNode":"d50a49c2dbcac231","fromSide":"left","toNode":"d57843207cdd8343","toSide":"right"},
+		{"id":"a7676e1be351c1af","fromNode":"d50a49c2dbcac231","fromSide":"left","toNode":"a97f1ec29f5f44c1","toSide":"right"},
+		{"id":"2923830bb9f532ae","fromNode":"d50a49c2dbcac231","fromSide":"left","toNode":"0c6ddd288affe777","toSide":"right"}
+	]
+}

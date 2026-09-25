@@ -1,0 +1,43 @@
+{
+	"nodes":[
+		{"id":"79888e450c5e88d6","type":"text","text":"早期-Bare Metal","x":-369,"y":-156,"width":250,"height":60},
+		{"id":"b4ec0d17a2b622d0","type":"text","text":"1998(LAMP)","x":-369,"y":-280,"width":250,"height":60},
+		{"id":"11cf49b274ea3470","type":"text","text":"2002(amazon)","x":-80,"y":-280,"width":250,"height":60},
+		{"id":"484c049f9a92ae9c","type":"text","text":"Cloud Service","x":-79,"y":-156,"width":250,"height":60},
+		{"id":"4763ca07e9d679c2","type":"text","text":"2016(docker)","x":213,"y":-281,"width":250,"height":60},
+		{"id":"343fcc0eb56fd03c","type":"text","text":"container","x":212,"y":-156,"width":250,"height":60},
+		{"id":"ed83cabfeaf5d654","type":"text","text":"kubernetes(k8s)","x":520,"y":-156,"width":250,"height":60},
+		{"id":"a2d86c4a664d561d","type":"text","text":"2020(kubernetes)","x":521,"y":-281,"width":250,"height":60},
+		{"id":"84cbd38bb837a33a","type":"text","text":"serverless","x":980,"y":-156,"width":250,"height":60},
+		{"id":"c168ed95e0657eaf","type":"text","text":"由专业的服务器商提供云服务器，不需要自己维护","x":-78,"y":-31,"width":250,"height":60},
+		{"id":"f38e8d342c981005","type":"text","text":"自主购买服务器、部署在家里、公司","x":-368,"y":-31,"width":250,"height":60},
+		{"id":"d8212bdeb009c198","type":"text","text":"容器时代开启","x":212,"y":-26,"width":250,"height":60},
+		{"id":"8da0b2bd1ab95409","type":"text","text":"k8s开启自由包容的社区环境","x":521,"y":-31,"width":250,"height":60},
+		{"id":"0826e3b26420dbdc","type":"text","text":"云原生将应用部署到云服务器上，用户的应用只有在被访问时才会产生费用，云原生厂商的计算机资源的利用率也更高","x":980,"y":-60,"width":250,"height":129},
+		{"id":"ba7dda4594fc8059","type":"file","file":"007_CS自学/docker/k3s(K8S低配版).md","x":500,"y":120,"width":400,"height":400},
+		{"id":"fbfd4e41719720bb","type":"text","text":"2025(Cloud Native)","x":1140,"y":-310,"width":250,"height":60},
+		{"id":"ca0d78f2303d54ee","type":"text","text":"2014(aws lambda)","x":820,"y":-310,"width":250,"height":60},
+		{"id":"af363e1bbe8afd1e","type":"file","file":"007_CS自学/docker/Docker介绍大纲.md","x":80,"y":120,"width":400,"height":400},
+		{"id":"54bc955420a45370","x":1015,"y":220,"width":250,"height":160,"type":"text","text":"SaaS(基于云原生的技术，实现软件即服务；用户只需要关注将软件系统实现即可，剩下的部署、构建打包、运维由云服务器厂商负责)"}
+	],
+	"edges":[
+		{"id":"f31c1ab596e2103c","fromNode":"b4ec0d17a2b622d0","fromSide":"bottom","toNode":"79888e450c5e88d6","toSide":"top"},
+		{"id":"eae1632543fbf600","fromNode":"11cf49b274ea3470","fromSide":"bottom","toNode":"484c049f9a92ae9c","toSide":"top"},
+		{"id":"949ff3f2a48ab46b","fromNode":"4763ca07e9d679c2","fromSide":"bottom","toNode":"343fcc0eb56fd03c","toSide":"top"},
+		{"id":"4f602f4d5425e579","fromNode":"a2d86c4a664d561d","fromSide":"bottom","toNode":"ed83cabfeaf5d654","toSide":"top"},
+		{"id":"6448109187695ee1","fromNode":"ca0d78f2303d54ee","fromSide":"bottom","toNode":"84cbd38bb837a33a","toSide":"top"},
+		{"id":"7d4a02b2d892a57d","fromNode":"fbfd4e41719720bb","fromSide":"bottom","toNode":"84cbd38bb837a33a","toSide":"top"},
+		{"id":"de70ef4d76cdbec1","fromNode":"79888e450c5e88d6","fromSide":"right","toNode":"484c049f9a92ae9c","toSide":"left"},
+		{"id":"b4fddc4ed3af62dc","fromNode":"484c049f9a92ae9c","fromSide":"right","toNode":"343fcc0eb56fd03c","toSide":"left"},
+		{"id":"5f0ee43c0a8e3313","fromNode":"343fcc0eb56fd03c","fromSide":"right","toNode":"ed83cabfeaf5d654","toSide":"left"},
+		{"id":"6d10862bf6b9cb42","fromNode":"ed83cabfeaf5d654","fromSide":"right","toNode":"84cbd38bb837a33a","toSide":"left"},
+		{"id":"216c7fe09b399b76","fromNode":"79888e450c5e88d6","fromSide":"bottom","toNode":"f38e8d342c981005","toSide":"top"},
+		{"id":"17f4ad3ed0b2ad1c","fromNode":"484c049f9a92ae9c","fromSide":"bottom","toNode":"c168ed95e0657eaf","toSide":"top"},
+		{"id":"ebb7c14b7b884d89","fromNode":"343fcc0eb56fd03c","fromSide":"bottom","toNode":"d8212bdeb009c198","toSide":"top"},
+		{"id":"ae71768229ca7d6f","fromNode":"ed83cabfeaf5d654","fromSide":"bottom","toNode":"8da0b2bd1ab95409","toSide":"top"},
+		{"id":"d62c922138863e89","fromNode":"84cbd38bb837a33a","fromSide":"bottom","toNode":"0826e3b26420dbdc","toSide":"top"},
+		{"id":"af4c88ef521ef286","fromNode":"8da0b2bd1ab95409","fromSide":"bottom","toNode":"ba7dda4594fc8059","toSide":"top"},
+		{"id":"3c1be8dccb49257c","fromNode":"d8212bdeb009c198","fromSide":"bottom","toNode":"af363e1bbe8afd1e","toSide":"top"},
+		{"id":"6bca876621784c06","fromNode":"0826e3b26420dbdc","fromSide":"bottom","toNode":"54bc955420a45370","toSide":"top"}
+	]
+}

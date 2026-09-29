@@ -28,7 +28,8 @@
 		{"id":"2ab31bc63077c72c","type":"text","text":"高阶线性方程","x":-160,"y":845,"width":250,"height":60},
 		{"id":"e0825a6fe8208039","type":"text","text":"导数与微分","x":268,"y":-165,"width":250,"height":60},
 		{"id":"81baf2aba4630423","type":"text","text":"傅里叶级数","x":-160,"y":1160,"width":250,"height":60},
-		{"id":"a9595ebf009aa3fb","type":"text","text":"幂级数","x":-160,"y":1060,"width":250,"height":60}
+		{"id":"a9595ebf009aa3fb","type":"text","text":"幂级数","x":-160,"y":1060,"width":250,"height":60},
+		{"id":"487866d272a08193","x":800,"y":-1029,"width":801,"height":1099,"type":"file","file":"01-Areas/018_数学学习/10-大观/大观-数学/大观-数学-数一考点速查表.md"}
 	],
 	"edges":[
 		{"id":"995f7ded35d7d094","fromNode":"68752bcc155352b1","fromSide":"bottom","toNode":"a78fb95164d8f115","toSide":"top"},
@@ -59,6 +60,7 @@
 		{"id":"bafb5643f2c2fe93","fromNode":"2028b326a50bd211","fromSide":"right","toNode":"ef1714cf7ac3a40d","toSide":"left"},
 		{"id":"f01ebc35409edfdc","fromNode":"2028b326a50bd211","fromSide":"right","toNode":"a9595ebf009aa3fb","toSide":"left"},
 		{"id":"ef625c6df9ff4158","fromNode":"2028b326a50bd211","fromSide":"right","toNode":"81baf2aba4630423","toSide":"left"},
-		{"id":"f356b1516ae749c7","fromNode":"6c4381eaae6dfde7","fromSide":"right","toNode":"2a842bea33b7d2ef","toSide":"left"}
+		{"id":"f356b1516ae749c7","fromNode":"6c4381eaae6dfde7","fromSide":"right","toNode":"2a842bea33b7d2ef","toSide":"left"},
+		{"id":"2faaa764eb6cbe8c","fromNode":"68752bcc155352b1","fromSide":"right","toNode":"487866d272a08193","toSide":"left"}
 	]
 }

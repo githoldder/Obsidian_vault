@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2027考研冲刺阶段甘特图（10.04-12.20）</title>
+<style>
+  :root {
+    --bg: #fafafa;
+    --card: #ffffff;
+    --text: #1a1a1a;
+    --text-secondary: #666666;
+    --border: #e0e0e0;
+    --math: #378ADD;
+    --math-light: #E6F1FB;
+    --english: #1D9E75;
+    --english-light: #E1F5EE;
+    --politics: #D85A30;
+    --politics-light: #FAECE7;
+    --cs: #7F77DD;
+    --cs-light: #EEEDFE;
+    --milestone: #BA7517;
+    --milestone-light: #FAEEDA;
+    --exam: #E24B4A;
+    --exam-light: #FCEBEB;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 24px;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  h1 { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+  .subtitle { color: var(--text-secondary); font-size: 12px; margin-bottom: 20px; }
+  .legend {
+    display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 20px;
+  }
+  .legend-item {
+    display: flex; align-items: center; gap: 6px;
+    font-size: 12px; color: var(--text-secondary);
+  }
+  .legend-dot { width: 12px; height: 12px; border-radius: 3px; }
+  .gantt-wrap { overflow-x: auto; }
+  .gantt {
+    display: grid;
+    grid-template-columns: 140px repeat(78, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    min-width: 1200px;
+  }
+  .gantt > div {
+    background: var(--card);
+    padding: 6px 4px;
+    font-size: 11px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .gantt .header-row { background: #f5f5f5; font-weight: 500; font-size: 11px; }
+  .gantt .label { text-align: left; padding-left: 10px; font-weight: 500; font-size: 11px; }
+  .gantt .month { background: #f0f0f0; font-weight: 600; }
+  .gantt .day { color: var(--text-secondary); font-size: 10px; }
+  .gantt .weekend { background: #fafafa; color: #aaa; }
+  .bar {
+    border-radius: 3px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 10px;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .bar-math { background: var(--math); }
+  .bar-english { background: var(--english); }
+  .bar-politics { background: var(--politics); }
+  .bar-cs { background: var(--cs); }
+  .bar-milestone { background: var(--milestone); }
+  .bar-exam { background: var(--exam); }
+  .bar-review { background: #888; }
+
+  .section-title {
+    font-weight: 600; font-size: 13px; margin: 24px 0 12px;
+    padding-bottom: 6px; border-bottom: 1px solid var(--border);
+  }
+  .info-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 12px; margin-bottom: 20px;
+  }
+  .info-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 8px; padding: 14px;
+  }
+  .info-card h3 { font-size: 13px; font-weight: 600; margin-bottom: 8px; }
+  .info-card ul { list-style: none; padding: 0; }
+  .info-card li { font-size: 12px; color: var(--text-secondary); margin-bottom: 4px; }
+  .info-card li strong { color: var(--text); }
+
+  .timeline-table {
+    width: 100%; border-collapse: collapse; font-size: 12px;
+    background: var(--card); border-radius: 8px; overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  .timeline-table th, .timeline-table td {
+    padding: 8px 10px; text-align: left; border-bottom: 1px solid var(--border);
+  }
+  .timeline-table th { background: #f5f5f5; font-weight: 500; }
+  .timeline-table tr:last-child td { border-bottom: none; }
+  .tag {
+    display: inline-block; padding: 2px 8px; border-radius: 4px;
+    font-size: 11px; font-weight: 500;
+  }
+  .tag-math { background: var(--math-light); color: var(--math); }
+  .tag-english { background: var(--english-light); color: var(--english); }
+  .tag-politics { background: var(--politics-light); color: var(--politics); }
+  .tag-cs { background: var(--cs-light); color: var(--cs); }
+  .tag-milestone { background: var(--milestone-light); color: var(--milestone); }
+  .tag-exam { background: var(--exam-light); color: var(--exam); }
+</style>
+</head>
+<body>
+<h1>2027考研冲刺阶段甘特图</h1>
+<p class="subtitle">时间范围：2026年10月4日 — 12月20日 | 当前距离初试还有约76天</p>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot" style="background:var(--math)"></div>数学</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--english)"></div>英语</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--politics)"></div>政治</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--cs)"></div>408专业课</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--milestone)"></div>里程碑</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--exam)"></div>考试节点</div>
+</div>
+
+<div class="gantt-wrap">
+  <div class="gantt">
+    <!-- 月份行 -->
+    <div class="header-row label">科目/阶段</div>
+    <div class="header-row month" style="grid-column: 2 / 29;">10月</div>
+    <div class="header-row month" style="grid-column: 29 / 59;">11月</div>
+    <div class="header-row month" style="grid-column: 59 / 79;">12月</div>
+
+    <!-- 日期行 -->
+    <div class="header-row label">日期</div>
+    <!-- 10月: 4-31 = 28天 -->
+    <div class="day">4</div><div class="day">5</div><div class="day">6</div><div class="day">7</div>
+    <div class="day">8</div><div class="day weekend">9</div><div class="day weekend">10</div>
+    <div class="day">11</div><div class="day">12</div><div class="day">13</div><div class="day">14</div>
+    <div class="day">15</div><div class="day">16</div><div class="day">17</div><div class="day">18</div>
+    <div class="day">19</div><div class="day">20</div><div class="day">21</div><div class="day">22</div>
+    <div class="day">23</div><div class="day">24</div><div class="day">25</div><div class="day">26</div>
+    <div class="day">27</div><div class="day">28</div><div class="day">29</div><div class="day">30</div>
+    <div class="day">31</div>
+    <!-- 11月: 1-30 = 30天 -->
+    <div class="day">1</div><div class="day">2</div><div class="day">3</div><div class="day">4</div>
+    <div class="day">5</div><div class="day">6</div><div class="day">7</div><div class="day">8</div>
+    <div class="day weekend">9</div><div class="day weekend">10</div><div class="day">11</div><div class="day">12</div>
+    <div class="day">13</div><div class="day">14</div><div class="day">15</div><div class="day">16</div>
+    <div class="day">17</div><div class="day">18</div><div class="day">19</div><div class="day">20</div>
+    <div class="day">21</div><div class="day">22</div><div class="day">23</div><div class="day">24</div>
+    <div class="day">25</div><div class="day">26</div><div class="day">27</div><div class="day">28</div>
+    <div class="day">29</div><div class="day">30</div>
+    <!-- 12月: 1-20 = 20天 -->
+    <div class="day">1</div><div class="day">2</div><div class="day">3</div><div class="day">4</div>
+    <div class="day">5</div><div class="day">6</div><div class="day">7</div><div class="day">8</div>
+    <div class="day weekend">9</div><div class="day weekend">10</div><div class="day">11</div><div class="day">12</div>
+    <div class="day">13</div><div class="day">14</div><div class="day">15</div><div class="day">16</div>
+    <div class="day">17</div><div class="day">18</div><div class="day">19</div><div class="day">20</div>
+
+    <!-- 408一轮收尾 -->
+    <div class="label">408一轮收尾</div>
+    <div style="grid-column: 2 / 23;"><div class="bar bar-cs">408一轮收尾（DS+计组+OS+计网）</div></div>
+
+    <!-- 408强化 -->
+    <div class="label">408强化</div>
+    <div style="grid-column: 12 / 38;"><div class="bar bar-cs">408强化（大题+错题）</div></div>
+
+    <!-- 408真题 -->
+    <div class="label">408真题</div>
+    <div style="grid-column: 38 / 79;"><div class="bar bar-cs">408真题（1天考1天复盘）</div></div>
+
+    <!-- 数学强化 -->
+    <div class="label">数学强化</div>
+    <div style="grid-column: 2 / 38;"><div class="bar bar-math">数学强化收尾（高数+线代+概率论）</div></div>
+
+    <!-- 数学真题 -->
+    <div class="label">数学真题</div>
+    <div style="grid-column: 38 / 79;"><div class="bar bar-math">数学真题套卷</div></div>
+
+    <!-- 英语精读/翻译/作文 -->
+    <div class="label">英语精读/翻译/作文</div>
+    <div style="grid-column: 2 / 29;"><div class="bar bar-english">精读+翻译+写作功能句</div></div>
+
+    <!-- 英语真题 -->
+    <div class="label">英语真题套卷</div>
+    <div style="grid-column: 29 / 79;"><div class="bar bar-english">英语真题套卷+专项训练</div></div>
+
+    <!-- 政治 -->
+    <div class="label">政治启动+选择题</div>
+    <div style="grid-column: 38 / 59;"><div class="bar bar-politics">政治规划+选择题刻意练习</div></div>
+
+    <!-- 政治大题+真题 -->
+    <div class="label">政治大题+真题</div>
+    <div style="grid-column: 59 / 79;"><div class="bar bar-politics">大题抄材料+刷真题</div></div>
+
+    <!-- 全科模拟 -->
+    <div class="label">全科模拟/查漏补缺</div>
+    <div style="grid-column: 67 / 79;"><div class="bar bar-review">模拟考试+查漏补缺</div></div>
+
+    <!-- 预报名 -->
+    <div class="label" style="color:var(--milestone)">预报名</div>
+    <div style="grid-column: 7 / 11;"><div class="bar bar-milestone">10/9-10/12 预报名</div></div>
+
+    <!-- 网上报名 -->
+    <div class="label" style="color:var(--milestone)">网上报名</div>
+    <div style="grid-column: 13 / 23;"><div class="bar bar-milestone">10/15-10/24 网上报名</div></div>
+
+    <!-- 初试 -->
+    <div class="label" style="color:var(--exam);font-weight:600">初试</div>
+    <div style="grid-column: 77 / 79;"><div class="bar bar-exam">12/19-12/20 初试</div></div>
+  </div>
+</div>
+
+<div class="section-title">关键里程碑与考试节点</div>
+<table class="timeline-table">
+  <tr><th>日期</th><th>事件</th><th>类型</th><th>说明</th></tr>
+  <tr><td>10月9日-12日</td><td>预报名</td><td><span class="tag tag-milestone">里程碑</span></td><td>每天9:00-22:00，提前锁定报考点</td></tr>
+  <tr><td>10月15日-24日</td><td>网上报名</td><td><span class="tag tag-milestone">里程碑</span></td><td>每天9:00-22:00，正式填报志愿</td></tr>
+  <tr><td>10月25日</td><td>408一轮完成</td><td><span class="tag tag-cs">408</span></td><td>DS+计组+OS+计网全部过完一轮</td></tr>
+  <tr><td>11月1日</td><td>英语开始真题套卷</td><td><span class="tag tag-english">英语</span></td><td>在此之前完成精读/翻译/作文基础训练</td></tr>
+  <tr><td>11月10日</td><td>政治启动 / 数学强化完成 / 408强化结束</td><td><span class="tag tag-politics">政治</span><span class="tag tag-math">数学</span><span class="tag tag-cs">408</span></td><td>三科同时切换至真题阶段</td></tr>
+  <tr><td>12月10日-18日</td><td>全科模拟/查漏补缺</td><td><span class="tag tag-exam">冲刺</span></td><td>全真模拟考试，调整作息和心态</td></tr>
+  <tr><td>12月19日</td><td>初试第一天</td><td><span class="tag tag-exam">考试</span></td><td>上午8:30-11:30 政治 | 下午14:00-17:00 英语</td></tr>
+  <tr><td>12月20日</td><td>初试第二天</td><td><span class="tag tag-exam">考试</span></td><td>上午8:30-11:30 数学 | 下午14:00开始 408</td></tr>
+</table>
+
+<div class="section-title">四科冲刺策略概览</div>
+<div class="info-grid">
+  <div class="info-card">
+    <h3 style="color:var(--math)">数学（目标91-140分）</h3>
+    <ul>
+      <li><strong>11.10前：</strong>强化收尾，高数下重点（占70%精力）</li>
+      <li><strong>11.10后：</strong>真题套卷，每天3.5h输入+2h刷题</li>
+      <li><strong>核心：</strong>高数（82分）> 线代（30分）> 概率论（30分）</li>
+      <li><strong>方法：</strong>小步回头复习，A4错题纸+知识点压缩清单</li>
+    </ul>
+  </div>
+  <div class="info-card">
+    <h3 style="color:var(--english)">英语（目标60分+）</h3>
+    <ul>
+      <li><strong>11.1前：</strong>每天精读+翻译+写作功能句</li>
+      <li><strong>11.1后：</strong>真题套卷+专项训练到考前</li>
+      <li><strong>核心：</strong>阅读能力至上，所有题型都是阅读的衍生</li>
+      <li><strong>方法：</strong>真题为王，找出问题并修正才有意义</li>
+    </ul>
+  </div>
+  <div class="info-card">
+    <h3 style="color:var(--cs)">408（目标90-110分）</h3>
+    <ul>
+      <li><strong>10.25前：</strong>一轮过完（DS重点30分保底，计组+OS共80分要50分）</li>
+      <li><strong>11.10后：</strong>一天一套真题，考一天复盘一天</li>
+      <li><strong>核心：</strong>重复>输入，对着薄弱项专门强化</li>
+      <li><strong>方法：</strong>伪代码全写，不会看答案后重写</li>
+    </ul>
+  </div>
+  <div class="info-card">
+    <h3 style="color:var(--politics)">政治（目标60分+）</h3>
+    <ul>
+      <li><strong>11.10开始：</strong>一个多月弄清楚规划</li>
+      <li><strong>12月：</strong>刻意练习选择题，大题抄材料+刷真题</li>
+      <li><strong>核心：</strong>选择题得分是关键，大题靠背材料和抄材料</li>
+      <li><strong>材料：</strong>单科书+A4错题纸即可</li>
+    </ul>
+  </div>
+</div>
+
+<div class="section-title">每日时间分配建议（冲刺阶段）</div>
+<table class="timeline-table">
+  <tr><th>时段</th><th>10.4-10.31</th><th>11.1-11.9</th><th>11.10-12.18</th></tr>
+  <tr><td>上午 (3.5h)</td><td>数学强化</td><td>数学强化收尾</td><td>数学真题/政治</td></tr>
+  <tr><td>下午 (3h)</td><td>408一轮+英语精读</td><td>408强化+英语真题</td><td>408真题+英语真题</td></tr>
+  <tr><td>晚上 (2h)</td><td>数学刷题+回顾</td><td>数学刷题+政治启动</td><td>政治+错题复盘</td></tr>
+</table>
+
+<p style="margin-top:20px;color:var(--text-secondary);font-size:11px;text-align:center;">
+  生成时间：2026-10-04 | 数据来源：考研04-时间安排规划.md + 2027研考日程表
+</p>
+</body>
+</html>

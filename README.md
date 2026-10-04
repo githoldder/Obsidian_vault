@@ -345,7 +345,7 @@
 - [[ai产业链分层及vibe coding的git版本管理.excalidraw]] — AI 产业链 + git 版本管理
 - [[时间事务管理体系.excalidraw]] — 时间与事务管理体系图形化
 - [[知识层级体系&git原理.excalidraw 1]] — 知识层级与 git 原理对照
-- [[金字塔模型&漏斗模型.excalidraw]] — 金字塔与漏斗模型对比
+- [[金字塔模型&漏斗模型&PDLF框架.excalidraw]] — 金字塔与漏斗模型对比
 
 ### 视频媒体笔记
 - [[Media Note - 如何提出善意批评？]] — 善意批评的正确姿势

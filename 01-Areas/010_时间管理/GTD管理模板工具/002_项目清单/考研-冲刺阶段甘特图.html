@@ -126,12 +126,12 @@
 </style>
 </head>
 <body>
-<h1>2027考研冲刺阶段甘特图</h1>
-<p class="subtitle">时间范围：2026年10月4日 — 12月20日 | 当前距离初试还有约76天</p>
+<h1>2027考研冲刺阶段甘特图（含六级CET6）</h1>
+<p class="subtitle">时间范围：2026年10月4日 — 12月20日 | 距考研初试约76天 | 距六级笔试约68天</p>
 
 <div class="legend">
   <div class="legend-item"><div class="legend-dot" style="background:var(--math)"></div>数学</div>
-  <div class="legend-item"><div class="legend-dot" style="background:var(--english)"></div>英语</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--english)"></div>英语/六级</div>
   <div class="legend-item"><div class="legend-dot" style="background:var(--politics)"></div>政治</div>
   <div class="legend-item"><div class="legend-dot" style="background:var(--cs)"></div>408专业课</div>
   <div class="legend-item"><div class="legend-dot" style="background:var(--milestone)"></div>里程碑</div>
@@ -201,6 +201,14 @@
     <div class="label">英语真题套卷</div>
     <div style="grid-column: 29 / 79;"><div class="bar bar-english">英语真题套卷+专项训练</div></div>
 
+    <!-- 六级听力 -->
+    <div class="label">六级听力训练</div>
+    <div style="grid-column: 2 / 70;"><div class="bar bar-english" style="opacity:0.7">六级精听+泛听（隔日30min）</div></div>
+
+    <!-- 六级真题 -->
+    <div class="label">六级真题穿插</div>
+    <div style="grid-column: 29 / 70;"><div class="bar bar-english" style="opacity:0.5">六级真题（每1-2周1套）</div></div>
+
     <!-- 政治 -->
     <div class="label">政治启动+选择题</div>
     <div style="grid-column: 38 / 59;"><div class="bar bar-politics">政治规划+选择题刻意练习</div></div>
@@ -221,6 +229,14 @@
     <div class="label" style="color:var(--milestone)">网上报名</div>
     <div style="grid-column: 13 / 23;"><div class="bar bar-milestone">10/15-10/24 网上报名</div></div>
 
+    <!-- 六级口试 -->
+    <div class="label" style="color:var(--milestone)">六级口试</div>
+    <div style="grid-column: 49 / 51;"><div class="bar bar-milestone">11/21-22 口试</div></div>
+
+    <!-- 六级笔试 -->
+    <div class="label" style="color:var(--exam)">六级笔试</div>
+    <div style="grid-column: 70 / 71;"><div class="bar bar-exam">12/12 六级</div></div>
+
     <!-- 初试 -->
     <div class="label" style="color:var(--exam);font-weight:600">初试</div>
     <div style="grid-column: 77 / 79;"><div class="bar bar-exam">12/19-12/20 初试</div></div>
@@ -233,9 +249,11 @@
   <tr><td>10月9日-12日</td><td>预报名</td><td><span class="tag tag-milestone">里程碑</span></td><td>每天9:00-22:00，提前锁定报考点</td></tr>
   <tr><td>10月15日-24日</td><td>网上报名</td><td><span class="tag tag-milestone">里程碑</span></td><td>每天9:00-22:00，正式填报志愿</td></tr>
   <tr><td>10月25日</td><td>408一轮完成</td><td><span class="tag tag-cs">408</span></td><td>DS+计组+OS+计网全部过完一轮</td></tr>
-  <tr><td>11月1日</td><td>英语开始真题套卷</td><td><span class="tag tag-english">英语</span></td><td>在此之前完成精读/翻译/作文基础训练</td></tr>
+  <tr><td>11月1日</td><td>英语开始真题套卷</td><td><span class="tag tag-english">英语</span></td><td>考研精读收尾，切换真题；六级听力持续</td></tr>
   <tr><td>11月10日</td><td>政治启动 / 数学强化完成 / 408强化结束</td><td><span class="tag tag-politics">政治</span><span class="tag tag-math">数学</span><span class="tag tag-cs">408</span></td><td>三科同时切换至真题阶段</td></tr>
+  <tr><td>11月21日-22日</td><td>六级口试（如报名）</td><td><span class="tag tag-english">六级</span></td><td>CET-SET6，提前1周准备口语话题</td></tr>
   <tr><td>12月10日-18日</td><td>全科模拟/查漏补缺</td><td><span class="tag tag-exam">冲刺</span></td><td>全真模拟考试，调整作息和心态</td></tr>
+  <tr><td>12月12日</td><td>六级笔试</td><td><span class="tag tag-exam">考试</span></td><td>15:00-17:25，考研前一周绝佳热身</td></tr>
   <tr><td>12月19日</td><td>初试第一天</td><td><span class="tag tag-exam">考试</span></td><td>上午8:30-11:30 政治 | 下午14:00-17:00 英语</td></tr>
   <tr><td>12月20日</td><td>初试第二天</td><td><span class="tag tag-exam">考试</span></td><td>上午8:30-11:30 数学 | 下午14:00开始 408</td></tr>
 </table>
@@ -252,12 +270,13 @@
     </ul>
   </div>
   <div class="info-card">
-    <h3 style="color:var(--english)">英语（目标60分+）</h3>
+    <h3 style="color:var(--english)">英语（考研60分+ / 六级425+）</h3>
     <ul>
-      <li><strong>11.1前：</strong>每天精读+翻译+写作功能句</li>
-      <li><strong>11.1后：</strong>真题套卷+专项训练到考前</li>
-      <li><strong>核心：</strong>阅读能力至上，所有题型都是阅读的衍生</li>
-      <li><strong>方法：</strong>真题为王，找出问题并修正才有意义</li>
+      <li><strong>10.4-10.31：</strong>考研精读+翻译+作文功能句 + 六级听力启动</li>
+      <li><strong>11.1-12.11：</strong>考研真题套卷为主 + 六级真题穿插（每1-2周1套）</li>
+      <li><strong>12.12：</strong>六级笔试（考研前一周热身）</li>
+      <li><strong>核心：</strong>六级是考研的「降维打击」，只需补听力和汉译英</li>
+      <li><strong>方法：</strong>考研精读基础直接覆盖六级阅读，功能句共用</li>
     </ul>
   </div>
   <div class="info-card">
@@ -282,11 +301,15 @@
 
 <div class="section-title">每日时间分配建议（冲刺阶段）</div>
 <table class="timeline-table">
-  <tr><th>时段</th><th>10.4-10.31</th><th>11.1-11.9</th><th>11.10-12.18</th></tr>
-  <tr><td>上午 (3.5h)</td><td>数学强化</td><td>数学强化收尾</td><td>数学真题/政治</td></tr>
-  <tr><td>下午 (3h)</td><td>408一轮+英语精读</td><td>408强化+英语真题</td><td>408真题+英语真题</td></tr>
-  <tr><td>晚上 (2h)</td><td>数学刷题+回顾</td><td>数学刷题+政治启动</td><td>政治+错题复盘</td></tr>
+  <tr><th>时段</th><th>10.4-10.31</th><th>11.1-11.9</th><th>11.10-12.11</th><th>12.12-12.18</th></tr>
+  <tr><td>上午 (3.5h)</td><td>数学强化</td><td>数学强化收尾</td><td>数学真题/政治</td><td>数学真题/政治</td></tr>
+  <tr><td>下午 (3h)</td><td>408一轮+英语精读</td><td>408强化+英语真题</td><td>408真题+英语真题</td><td>408真题+英语真题</td></tr>
+  <tr><td>晚上 (2h)</td><td>数学刷题+六级听力</td><td>数学刷题+政治启动+六级听力</td><td>政治+错题复盘+六级听力</td><td>政治+错题复盘（六级已结束）</td></tr>
 </table>
+
+<p style="margin-top:12px;color:var(--text-secondary);font-size:12px;">
+  <strong>六级听力说明：</strong>隔日30分钟精听，不占用大块时间。六级真题每1-2周1套（周末完成），不挤占考研复习节奏。
+</p>
 
 <p style="margin-top:20px;color:var(--text-secondary);font-size:11px;text-align:center;">
   生成时间：2026-10-04 | 数据来源：考研04-时间安排规划.md + 2027研考日程表
